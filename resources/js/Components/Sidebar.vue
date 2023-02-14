@@ -27,49 +27,32 @@
                         <div class="sb-nav-link-icon">
                             <i class="fas fa-book-open"></i>
                         </div>
-                        Mata Pelajaran
+                        Postingan
                     </Link>
                     <Link
-                        class="nav-link"
+                        href="/admin/lesson"
                         :class="{
-                            active: $page.url.startsWith('/admin/classroom'),
+                            active: $page.url.startsWith('/admin/lesson'),
                         }"
-                        href="/admin/classroom"
+                        class="nav-link"
                     >
                         <div class="sb-nav-link-icon">
                             <i class="fas fa-columns"></i>
                         </div>
-                        Kelas
+                        Kategori
                     </Link>
                     <Link
-                        href="/admin/student"
+                        href="/admin/lesson"
                         :class="{
-                            active: $page.url.startsWith('/admin/student'),
+                            active: $page.url.startsWith('/admin/lesson'),
                         }"
                         class="nav-link"
                     >
                         <div class="sb-nav-link-icon">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                        Siswa
-                    </Link>
-                    <div class="sb-sidenav-menu-heading">Exam</div>
-                    <Link
-                        class="nav-link"
-                        href="/admin/exam"
-                        :class="{ active: $page.url.startsWith('/admin/exam') }"
-                    >
-                        <div class="sb-nav-link-icon">
                             <i class="fas fa-chart-area"></i>
                         </div>
-                        Ujian
+                        Tag
                     </Link>
-                    <a class="nav-link" href="tables.html">
-                        <div class="sb-nav-link-icon">
-                            <i class="fas fa-table"></i>
-                        </div>
-                        Ujian Session
-                    </a>
                 </div>
             </div>
         </nav>
