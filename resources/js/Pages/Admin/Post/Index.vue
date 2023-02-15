@@ -13,5 +13,6 @@ export default {
     layout: Layout,
     as,
     ds,
+    cs,
 };
 </script>
