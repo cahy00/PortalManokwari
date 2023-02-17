@@ -106,7 +106,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::findOrFail($id)->with(['user', 'category']);
+				return inertia('Admin/Post/Show', compact('post'));
     }
 
     /**

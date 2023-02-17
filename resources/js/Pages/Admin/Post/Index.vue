@@ -58,7 +58,7 @@
                                     <!-- <td v-html="posts.body"></td> -->
                                     <td>
                                         <Link
-                                            :href="`/admin/show/${posts.id}`"
+                                            :href="`/post/show/${posts.id}`"
                                             class="btn btn-default"
                                             ><i class="fa fa-plus-circle"></i
                                             >Show</Link
