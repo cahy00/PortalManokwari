@@ -1,4 +1,5 @@
 <template>
+    <Head title="Post"></Head>
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
@@ -9,7 +10,7 @@
                         <div class="row">
                             <div class="col-8">
                                 <Link
-                                    href="/admin/post/create"
+                                    href="/post/create"
                                     class="btn btn-md btn-primary"
                                     ><i class="fas fa-plus"></i>
                                     Tambah
@@ -25,7 +26,8 @@
                                     <th>#</th>
                                     <th>Judul</th>
                                     <th>Kategori</th>
-                                    <th>Konten</th>
+                                    <th>Thumbnail</th>
+                                    <th>Status</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -36,15 +38,23 @@
                                     <td>{{ posts.category.title }}</td>
                                     <td>
                                         <img
-                                            src="{{ asset(posts.thumbnail) }}"
-                                            alt=""
+                                            v-bind:src="posts.thumbnail"
+                                            class="img-thumbnail img-circle"
+                                            style="width: 50%; height: 150px"
                                         />
+                                    </td>
+                                    <td>
+                                        <span
+                                            class="btn btn-pill btn-success btn-sm"
+                                            >Success</span
+                                        >
                                     </td>
                                     <!-- <td v-html="posts.body"></td> -->
                                     <td>
                                         <Link
                                             :href="`/admin/show/${posts.id}`"
-                                            class="btn btn-warning"
+                                            class="btn btn-default"
+                                            ><i class="fa fa-plus-circle"></i
                                             >Show</Link
                                         >
                                     </td>
@@ -63,13 +73,14 @@
 import Layout from "../../../Layouts/Layout.vue";
 import Footer from "../../../Components/Footer.vue";
 import { Link } from "@inertiajs/inertia-vue3";
-import { assert } from "@vue/compiler-core";
+import { Head } from "@inertiajs/inertia-vue3";
 
 export default {
     layout: Layout,
     components: {
         Footer,
         Link,
+        Head,
     },
     props: {
         post: Object,
