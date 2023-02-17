@@ -1,15 +1,78 @@
 <template>
     <div id="layoutSidenav_content">
         <main>
-            <h1>Test</h1>
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">Postingan</h1>
+                <ol class="breadcrumb mb-4"></ol>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-8">
+                                <Link
+                                    href="/admin/post/create"
+                                    class="btn btn-md btn-primary"
+                                    ><i class="fas fa-plus"></i>
+                                    Tambah
+                                </Link>
+                            </div>
+                            <div class="col-4"></div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table id="datatablesSimple" class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Judul</th>
+                                    <th>Kategori</th>
+                                    <th>Konten</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="posts in post" :key="posts.id">
+                                    <td>1</td>
+                                    <td>{{ posts.title }}</td>
+                                    <td>{{ posts.category.title }}</td>
+                                    <td>
+                                        <img
+                                            src="{{ asset(posts.thumbnail) }}"
+                                            alt=""
+                                        />
+                                    </td>
+                                    <!-- <td v-html="posts.body"></td> -->
+                                    <td>
+                                        <Link
+                                            :href="`/admin/show/${posts.id}`"
+                                            class="btn btn-warning"
+                                            >Show</Link
+                                        >
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </main>
+        <Footer />
     </div>
 </template>
 
 <script>
 import Layout from "../../../Layouts/Layout.vue";
+import Footer from "../../../Components/Footer.vue";
+import { Link } from "@inertiajs/inertia-vue3";
+import { assert } from "@vue/compiler-core";
 
 export default {
     layout: Layout,
+    components: {
+        Footer,
+        Link,
+    },
+    props: {
+        post: Object,
+    },
 };
 </script>
