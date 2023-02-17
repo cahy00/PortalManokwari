@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Draft;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -44,31 +45,54 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-					'title' => 'required|string|max:50',
-					'body' => 'required',
+					'title' 			=> 'required|string|max:50',
+					'body' 				=> 'required',
 					'category_id' => 'required',
-					'thumbnail' => 'required|mimes:jpg,jpeg,png',
+					'thumbnail' 	=> 'required|mimes:jpg,jpeg,png',
 
 				]);
 
-				if($request->file('thumbnail')->isValid())
-				{
-					$file = $request->file('thumbnail');
-					$name = date('YmdHis');
-					$extension = $file->getClientOriginalExtension();
-					$newName = $name . "." . $extension;
-					$uploads   = Storage::putFileAs('public/thumbnail', $request->file('thumbnail'), $newName);
+				if($request->status == 1){
+					if($request->file('thumbnail')->isValid())
+					{
+						$file 			= $request->file('thumbnail');
+						$name 			= date('YmdHis');
+						$extension 	= $file->getClientOriginalExtension();
+						$newName 		= $name . "." . $extension;
+						$uploads   	= Storage::putFileAs('public/thumbnail', $request->file('thumbnail'), $newName);
+					}
+
+					$post = Post::create([
+						'title' 			=> $request->title,
+						'slug'  			=> Str::slug($request->title),
+						'category_id' => $request->category_id,
+						'user_id' 		=> 1,
+						'body' 				=> $request->body,
+						'excerpt' 		=> Str::limit(strip_tags($request->body, '150')),
+						'thumbnail' 	=> 'storage/thumbnail/'. $newName,
+						'status' 			=> $request->status
+					]);
+				}else{
+					if($request->file('thumbnail')->isValid())
+					{
+						$file 				= $request->file('thumbnail');
+						$name 				= date('YmdHis');
+						$extension 		= $file->getClientOriginalExtension();
+						$newName 			= $name . "." . $extension;
+						$uploads   		= Storage::putFileAs('public/thumbnail', $request->file('thumbnail'), $newName);
+					}
+
+					$draft = Draft::create([
+						'title' 			=> $request->title,
+						'slug'  			=> Str::slug($request->title),
+						'category_id' => $request->category_id,
+						'user_id' 		=> 1,
+						'body' 				=> $request->body,
+						'excerpt' 		=> Str::limit(strip_tags($request->body, '150')),
+						'thumbnail' 	=> 'storage/thumbnail/'. $newName,
+						'status' 			=> $request->status
+					]);
 				}
-
-				$post = Post::create([
-					'title' => $request->title,
-					'slug'  => Str::slug($request->title),
-					'category_id' => $request->category_id,
-					'user_id' => 1,
-					'body' => $request->body,
-					'excerpt' => Str::limit(strip_tags($request->body, '150')),
-					'thumbnail' => 'storage/thumbnail/'. $newName,
-				]);
 
 				return redirect()->route('post');
     }

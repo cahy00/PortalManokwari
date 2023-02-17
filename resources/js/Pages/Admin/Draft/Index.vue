@@ -3,18 +3,15 @@
     <div id="layoutSidenav_content">
         <main>
             <div class="container-fluid px-4">
-                <h1 class="mt-4">Postingan</h1>
+                <h1 class="mt-4">Draft Postingan</h1>
                 <ol class="breadcrumb mb-4"></ol>
                 <div class="card mb-4">
                     <div class="card-header">
                         <div class="row">
                             <div class="col-8">
-                                <Link
-                                    href="/post/create"
-                                    class="btn btn-md btn-primary"
-                                    ><i class="fas fa-plus"></i>
-                                    Tambah
-                                </Link>
+                                <h5>
+                                    <i class="fa fa-bookmark"></i> Daftar Draft
+                                </h5>
                             </div>
                             <div class="col-4"></div>
                         </div>
@@ -32,33 +29,33 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="posts in post" :key="posts.id">
+                                <tr v-for="drafts in draft" :key="drafts.id">
                                     <td>1</td>
-                                    <td>{{ posts.title }}</td>
-                                    <td>{{ posts.category.title }}</td>
+                                    <td>{{ drafts.title }}</td>
+                                    <td>{{ drafts.category.title }}</td>
                                     <td>
                                         <img
-                                            v-bind:src="posts.thumbnail"
+                                            v-bind:src="drafts.thumbnail"
                                             class="img-thumbnail img-circle"
                                             style="width: 50%; height: 150px"
                                         />
                                     </td>
-                                    <td v-if="posts.status == 1">
+                                    <td v-if="drafts.status == 1">
                                         <span
                                             class="btn btn-pill btn-success btn-sm"
                                             >Published</span
                                         >
                                     </td>
-                                    <td v-if="posts.status == 0">
+                                    <td v-if="drafts.status == 0">
                                         <span
                                             class="btn btn-pill btn-warning btn-sm"
                                             >Draft</span
                                         >
                                     </td>
-                                    <!-- <td v-html="posts.body"></td> -->
+                                    <!-- <td v-html="drafts.body"></td> -->
                                     <td>
                                         <Link
-                                            :href="`/admin/show/${posts.id}`"
+                                            :href="`/admin/show/${drafts.id}`"
                                             class="btn btn-default"
                                             ><i class="fa fa-plus-circle"></i
                                             >Show</Link
@@ -89,7 +86,7 @@ export default {
         Head,
     },
     props: {
-        post: Object,
+        draft: Object,
     },
 };
 </script>

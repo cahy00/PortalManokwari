@@ -18,9 +18,9 @@
                     </Link>
                     <div class="sb-sidenav-menu-heading">Modul</div>
                     <Link
-                        href="/admin/lesson"
+                        href="/post"
                         :class="{
-                            active: $page.url.startsWith('/admin/lesson'),
+                            active: $page.url.startsWith('/post'),
                         }"
                         class="nav-link"
                     >
@@ -28,6 +28,18 @@
                             <i class="fas fa-book-open"></i>
                         </div>
                         Postingan
+                    </Link>
+                    <Link
+                        href="/draft"
+                        :class="{
+                            active: $page.url.startsWith('/draft'),
+                        }"
+                        class="nav-link"
+                    >
+                        <div class="sb-nav-link-icon">
+                            <i class="fa fa-archive"></i>
+                        </div>
+                        Draft Postingan
                     </Link>
                     <Link
                         href="/admin/lesson"

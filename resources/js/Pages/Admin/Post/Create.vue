@@ -75,23 +75,46 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mb-4">
-                                <label for="thumbnail">Gambar Utama</label>
-                                <input
-                                    type="file"
-                                    class="form-control"
-                                    @input="
-                                        form.thumbnail = $event.target.files[0]
-                                    "
-                                />
-                                <div
-                                    v-if="errors.thumbnail"
-                                    class="invalid-feedback"
-                                >
-                                    {{ errors.thumbnail }}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-4">
+                                        <label for="thumbnail"
+                                            >Gambar Utama</label
+                                        >
+                                        <input
+                                            type="file"
+                                            class="form-control"
+                                            @input="
+                                                form.thumbnail =
+                                                    $event.target.files[0]
+                                            "
+                                        />
+                                        <div
+                                            v-if="errors.thumbnail"
+                                            class="invalid-feedback"
+                                        >
+                                            {{ errors.thumbnail }}
+                                        </div>
+                                        <div
+                                            v-if="errors[0]"
+                                            class="invalid-feedback"
+                                        >
+                                            {{ errors[0] }}
+                                        </div>
+                                    </div>
                                 </div>
-                                <div v-if="errors[0]" class="invalid-feedback">
-                                    {{ errors[0] }}
+                                <div class="col-md-6">
+                                    <div class="mb-">
+                                        <label for="status">Status</label>
+                                        <select
+                                            id="status"
+                                            class="form-select"
+                                            v-model="form.status"
+                                        >
+                                            <option value="0">Draft</option>
+                                            <option value="1">Posting</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="mb-4">
@@ -164,18 +187,20 @@ export default {
                 category_id: "",
                 body: "",
                 thumbnail: "",
+                status: "",
             },
         };
     },
     methods: {
         submit() {
             Inertia.post(
-                "/admin/post/create",
+                "/post/create",
                 {
                     title: this.form.title,
                     category_id: this.form.category_id,
                     body: this.form.body,
                     thumbnail: this.form.thumbnail,
+                    status: this.form.status,
                 },
                 {
                     onSuccess: () => {

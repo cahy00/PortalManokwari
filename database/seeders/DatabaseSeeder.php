@@ -43,7 +43,8 @@ class DatabaseSeeder extends Seeder
 					'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, voluptates tempore quasi dolores culpa unde nesciunt velit itaque fuga magni incidunt tenetur, nisi quis perspiciatis obcaecati atque nihil. Aliquid vero, aliquam dignissimos incidunt praesentium distinctio quaerat aspernatur non sint eveniet?',
 					'slug' => 'ini-contoh',
 					'excerpt' => 'quasi dolores culpa unde nesciunt velit itaque fuga magni incidunt tenetur, nisi quis perspiciatis obcaecati atque nihil',
-					'thumbnail' => 'test.jpg'
+					'thumbnail' => 'test.jpg',
+					'status' => 1
 				]);
     }
 }

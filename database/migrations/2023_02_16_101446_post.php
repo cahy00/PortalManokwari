@@ -22,6 +22,7 @@ return new class extends Migration
 					$table->text('excerpt');
 					$table->text('body');
 					$table->string('thumbnail')->nullable();
+					$table->enum('status', [0, 1]);
 					$table->timestamps();
 				});
     }
