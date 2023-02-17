@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-6">
-                                <Link href="/admin/post" class="btn btn-success"
+                                <Link href="/post" class="btn btn-success"
                                     ><i
                                         class="fa fa-angle-left"
                                         aria-hidden="true"

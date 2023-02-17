@@ -46,7 +46,7 @@
                                     <td>
                                         <span
                                             class="btn btn-pill btn-success btn-sm"
-                                            >Success</span
+                                            >Published</span
                                         >
                                     </td>
                                     <!-- <td v-html="posts.body"></td> -->
