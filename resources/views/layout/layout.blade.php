@@ -42,23 +42,15 @@
 
   @include('components.header')
 
-  @include('components.hero')
-
+	
   <main id="main">
+		
 
-    @include('components.clients')
+		@yield('content')
 
-    @include('components.cta')
+    
 
-    @include('components.feature')
-
-    @include('components.services')
-
-    @include('components.blog')
-
-    @include('components.contact')
-
-  </main><!-- End #main -->
+  </main>
 
   @include('components.footer')
 
