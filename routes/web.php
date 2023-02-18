@@ -17,5 +17,7 @@ Route::get('/draft', [DraftController::class, 'index'])->name('draft');
 
 
 Route::prefix('user')->group(function(){
-	Route::get('/', [LandingController::class, 'index']);
+	
 });
+
+Route::get('/', [LandingController::class, 'index']);

@@ -14,7 +14,7 @@ class LandingController extends Controller
      */
     public function index()
     {
-        return inertia('User/Landing/Index');
+        return view('/user/landing/index');
     }
 
     /**

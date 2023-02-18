@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+				<meta content="width=device-width, initial-scale=1.0" name="viewport">
+        {{-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> --}}
         <meta name="description" content="" />
 				<meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="author" content="" />
@@ -39,10 +40,14 @@
 				@inertiaHead
     </head>
     <body>
+			
             
 					@inertia()
             
 
+					<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+					<div id="preloader"></div>
 				{{-- user script --}}
 				<!-- Vendor JS Files -->
 				<script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>

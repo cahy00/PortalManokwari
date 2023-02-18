@@ -1,5 +1,5 @@
 <template>
-    <header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <header id="header" class="header fixed-top">
         <div
             class="container-fluid d-flex align-items-center justify-content-between"
         >
