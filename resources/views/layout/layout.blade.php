@@ -48,6 +48,9 @@
 
 		@yield('content')
 
+		@yield('content-blog')
+
+		@yield('footer')
     
 
   </main>
