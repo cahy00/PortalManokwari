@@ -29,6 +29,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{{asset('assets/css/main.css')}}" rel="stylesheet">
+  {{-- <link href="{{asset('assets/css/style.css')}}" rel="stylesheet"> --}}
 
   <!-- =======================================================
   * Template Name: HeroBiz - v2.4.0
