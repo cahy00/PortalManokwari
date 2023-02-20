@@ -3,11 +3,9 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
 use Illuminate\Http\Request;
-use App\Models\Post;
 
-class LandingController extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +14,7 @@ class LandingController extends Controller
      */
     public function index()
     {
-				$post = Post::all();
-        return view('/user/landing/index', compact('post'));
+				return view('user.landing.index', compact('post'));
     }
 
     /**
@@ -49,11 +46,7 @@ class LandingController extends Controller
      */
     public function show($id)
     {
-				$post = Post::findOrFail($id);
-				$allpost = Post::all();
-				$allcategory = Category::all();
-				// dd($post);
-        return view('user.landing.blog_detail', compact('post', 'allpost', 'allcategory'));
+        //
     }
 
     /**

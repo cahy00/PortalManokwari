@@ -21,3 +21,4 @@ Route::prefix('user')->group(function(){
 });
 
 Route::get('/', [LandingController::class, 'index']);
+Route::get('/blog-detail/show/{id}', [LandingController::class, 'show'])->name('blog.show');

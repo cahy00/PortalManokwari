@@ -4,22 +4,14 @@
 
 		<a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
 			<!-- Uncomment the line below if you also wish to use an image logo -->
-			<img src="bkn/logobkn.jpeg" alt=""> 
+			<img src="{{asset('bkn/logobkn.jpeg')}}" alt=""> 
 			{{-- <h1>HeroBiz<span>.</span></h1> --}}
 		</a>
 
 		<nav id="navbar" class="navbar">
 			<ul>
 
-				<li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-					<ul>
-						<li><a href="index.html">Home 1 - index.html</a></li>
-						<li><a href="index-2.html">Home 2 - index-2.html</a></li>
-						<li><a href="index-3.html" class="active">Home 3 - index-3.html</a></li>
-						<li><a href="index-4.html">Home 4 - index-4.html</a></li>
-					</ul>
-				</li>
-
+				<li><a class="nav-link scrollto" href="/">Home</a></li>
 				<li><a class="nav-link scrollto" href="index.html#about">About</a></li>
 				<li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
 				<li><a class="nav-link scrollto" href="index.html#portfolio">Portfolio</a></li>
@@ -73,8 +65,8 @@
 
 		<a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
 			<!-- Uncomment the line below if you also wish to use an image logo -->
-			<img src="bkn/Logo_BerAKHLAK.png" alt=""> 
-			<img src="bkn/berakhlak.png" alt=""> 
+			<img src="{{asset('bkn/Logo_BerAKHLAK.png')}}" alt=""> 
+			<img src="{{asset('bkn/berakhlak.png')}}" alt=""> 
 			{{-- <h1>HeroBiz<span>.</span></h1> --}}
 		</a>
 
