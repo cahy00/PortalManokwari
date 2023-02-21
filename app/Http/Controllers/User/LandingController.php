@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Hero;
 use Illuminate\Http\Request;
 use App\Models\Post;
 
@@ -26,12 +27,10 @@ class LandingController extends Controller
 				->where('category_id', '>', 1)
 				->limit(6)
 				->get();
-        return view('/user/landing/index', compact('post', 'artikel'));
 
-				$recent_post = Post::all();
-				if($recent_post->category->title == 'Berita Kepegawaian'){
-					
-				}
+				$hero = Hero::all();
+        return view('/user/landing/index', compact('post', 'artikel', 'hero'));
+
     }
 
     /**

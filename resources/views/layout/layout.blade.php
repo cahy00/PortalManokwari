@@ -45,7 +45,7 @@
 
 	
   <main id="main">
-		
+		@yield('content-hero')
 
 		@yield('content')
 

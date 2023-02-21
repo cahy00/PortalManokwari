@@ -25,13 +25,18 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Judul</th>
-                                    <th>Kategori</th>
-                                    <th>Thumbnail</th>
-                                    <th>Status</th>
+                                    <th>Deskripsi</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
-                            <tbody></tbody>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
