@@ -5,9 +5,9 @@
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
       <div class="container">
-
+				<br>
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Blog Details</h2>
+          <h2>Berita Kepegawaian</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
             <li><a href="blog.html">Blog</a></li>
@@ -124,17 +124,14 @@
               <div class="sidebar-item tags">
                 <h3 class="sidebar-title">Tags</h3>
                 <ul class="mt-3">
-                  <li><a href="#">App</a></li>
-                  <li><a href="#">IT</a></li>
-                  <li><a href="#">Business</a></li>
-                  <li><a href="#">Mac</a></li>
-                  <li><a href="#">Design</a></li>
-                  <li><a href="#">Office</a></li>
-                  <li><a href="#">Creative</a></li>
-                  <li><a href="#">Studio</a></li>
-                  <li><a href="#">Smart</a></li>
-                  <li><a href="#">Tips</a></li>
-                  <li><a href="#">Marketing</a></li>
+                  <li><a href="#">ASNkinibeda</a></li>
+									<li><a href="#">ASNPelayanPublik</a></li>
+									<li><a href="#">PPPK2023</a></li>
+									<li><a href="#">AgenPerubahan</a></li>
+									<li><a href="#">Sekdin2022</a></li>
+									<li><a href="#">ReformasiBKN</a></li>
+									<li><a href="#">SatuDataASN</a></li>
+									<li><a href="#">ASNBelajarMandiri</a></li>
                 </ul>
               </div><!-- End sidebar tags-->
 

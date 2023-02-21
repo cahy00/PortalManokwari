@@ -9,10 +9,10 @@
 
         <div class="row gy-5">
 
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200" >
             <div class="service-item">
-              <div class="img">
-                <img src="assets/img/services-1.jpg" class="img-fluid" alt="">
+              <div class="img" style="overflow: hidden">
+                <img src="assets/img/blog/blog-recent-1.jpg" class="img-fluid" alt="" style="min-width: 120px: min-height:300px"> 
               </div>
               <div class="details position-relative">
                 <div class="icon">
@@ -29,7 +29,7 @@
           <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
             <div class="service-item">
               <div class="img" style="overflow: hidden">
-                <img src="bkn/bkn_mkw.png" class="img-fluid" style="max-height: 500px">
+                <img src="bkn/bkn_mkw.png" class="img-fluid" style="min-height: 316px; max-height:316px; min-width:420px;max-width:420px">
               </div>
               
 							<div class="details position-relative">
