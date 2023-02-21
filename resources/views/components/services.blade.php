@@ -3,7 +3,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Layanan Kepegawaian</h2>
+          <h2>Artikel Kepegawaian</h2>
           <p>Kami siap melayani dengan sepenuh hati</p>
         </div>
 

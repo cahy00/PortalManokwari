@@ -206,7 +206,7 @@ export default {
                     onSuccess: () => {
                         Swal.fire({
                             title: "Success!",
-                            text: "Siswa Berhasil Disimpan.",
+                            text: "Postingan Berhasil Disimpan.",
                             icon: "success",
                             showConfirmButton: false,
                             timer: 2000,

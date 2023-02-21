@@ -16,8 +16,22 @@ class LandingController extends Controller
      */
     public function index()
     {
-				$post = Post::all();
-        return view('/user/landing/index', compact('post'));
+				$post = Post::with(['category', 'user'])
+				->where('category_id', 1)
+				->orderBy('created_at', 'DESC')
+				->take(3)
+				->get();
+
+				$artikel = Post::with(['category', 'user'])
+				->where('category_id', '>', 1)
+				->limit(6)
+				->get();
+        return view('/user/landing/index', compact('post', 'artikel'));
+
+				$recent_post = Post::all();
+				if($recent_post->category->title == 'Berita Kepegawaian'){
+					
+				}
     }
 
     /**
