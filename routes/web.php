@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\DraftController;
+use App\Http\Controllers\Admin\HeroesController;
 use App\Http\Controllers\User\LandingController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,10 @@ Route::get('/post/edit', [PostController::class, 'edit'])->name('post.edit');
 
 //route draft 
 Route::get('/draft', [DraftController::class, 'index'])->name('draft');
+
+//route hero
+Route::get('/hero', [HeroesController::class, 'index'])->name('hero');
+Route::get('/hero/create', [HeroesController::class, 'create'])->name('hero.create');
 
 
 Route::prefix('user')->group(function(){

@@ -36,10 +36,10 @@
 										<div class="icon">
 											<i class="bi bi-broadcast"></i>
 										</div>
-										<a href="#" class="stretched-link">
+										<a href="{{route('blog.show', $artikel->id)}}" class="stretched-link">
 											<h3>{{$artikel->title}}</h3>
+											<p>{{$artikel->excerpt}}</p>
 										</a>
-										<p>{{$artikel->excerpt}}</p>
 									</div>
 								</div>
 							</div>

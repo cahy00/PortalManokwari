@@ -65,6 +65,19 @@
                         </div>
                         Tag
                     </Link>
+                    <div class="sb-sidenav-menu-heading">Interface</div>
+                    <Link
+                        href="/hero"
+                        :class="{
+                            active: $page.url.startsWith('/hero'),
+                        }"
+                        class="nav-link"
+                    >
+                        <div class="sb-nav-link-icon">
+                            <i class="fa fa-list-ul"></i>
+                        </div>
+                        Pengumuman
+                    </Link>
                 </div>
             </div>
         </nav>
