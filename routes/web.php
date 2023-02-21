@@ -21,6 +21,7 @@ Route::get('/hero', [HeroesController::class, 'index'])->name('hero');
 Route::get('/hero/create', [HeroesController::class, 'create'])->name('hero.create');
 Route::post('/hero/create', [HeroesController::class, 'store'])->name('hero.store');
 
+Route::prefix('admin')->group(function(){});
 
 Route::prefix('user')->group(function(){
 	
