@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Hero;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class HeroesController extends Controller
 {
@@ -37,7 +38,27 @@ class HeroesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+					'title' => 'required|max:100',
+					'picture' => 'required|mimes:png,jpg,jpeg'
+				]);
+
+				if($request->file('picture')->isValid())
+				{
+					$file = $request->file('picture');
+					$name = date('YmdHis');
+					$extension = $file->getClientOriginalExtension();
+					$newName = $name . "." . $extension;
+					$uploads = Storage::putFileAs('public/picture', $request->file('picture'), $newName);
+				}
+
+				$hero = Hero::create([
+					'title' => $request->title,
+					'picture' => 'storage/picture/'. $newName,
+					'desc' => $request->desc
+				]);
+
+				return redirect()->route('hero');
     }
 
     /**
