@@ -84,10 +84,13 @@
                                         <input
                                             type="file"
                                             class="form-control"
+                                            id="image"
                                             @input="
                                                 form.thumbnail =
                                                     $event.target.files[0]
                                             "
+                                            ref="fileInput"
+                                            on-click="previewImage()"
                                         />
                                         <div
                                             v-if="errors.thumbnail"
@@ -189,6 +192,7 @@ export default {
                 thumbnail: "",
                 status: "",
             },
+            imageData: null,
         };
     },
     methods: {
@@ -215,6 +219,20 @@ export default {
                 }
             );
         },
+
+        // previewImage() {
+        //     const image = document.querySelector("#image");
+        //     const imgPreview = document.querySelector(".img-preview");
+
+        //     imgPreview.style.display = "block";
+
+        //     const oFReader = new FileReader();
+        //     oFReader.readAsDataURL(image.files[0]);
+
+        //     oFReader.onload = function (oFREvent) {
+        //         imgPreview.src = oFREvent.target.result;
+        //     };
+        // },
     },
 };
 </script>
