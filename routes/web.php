@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\DraftController;
 use App\Http\Controllers\Admin\HeroesController;
+use App\Http\Controllers\User\AboutController;
 use App\Http\Controllers\User\LandingController;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
@@ -36,3 +37,7 @@ Route::prefix('user')->group(function(){
 
 Route::get('/', [LandingController::class, 'index']);
 Route::get('/blog-detail/show/{id}', [LandingController::class, 'show'])->name('blog.show');
+
+Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::get('/profil', [AboutController::class, 'profil'])->name('profil');
+

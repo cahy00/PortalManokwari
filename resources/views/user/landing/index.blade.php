@@ -130,6 +130,39 @@
 
 	</div>
 
+@section('content-survey')
+<section id="onfocus" class="onfocus">
+	<div class="container-fluid p-0" data-aos="fade-up">
+
+		<div class="section-header">
+			<h2>Survey Pelayanan</h2>
+			<p>Bantu kami untuk menjadi lebih baik lagi melalui Layanan Informasi Website BKN Kanreg XIV</p>
+		</div>
+
+		<div class="row g-0">
+			<div class="col-lg-6 video-play position-relative">
+				{{-- <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a> --}}
+			</div>
+			<div class="col-lg-6">
+				<div class="content d-flex flex-column justify-content-center h-100">
+					<h3>Survey Pelayanan <span style="color:aqua">Layanan Informasi Website BKN Kanreg XIV</span></h3>
+					<blockquote>
+					<p class="fst-italic">
+						"Kami berharap dapat memperoleh masukan dalam meningkatkan pelayanan informasi kami melalui website ini"
+					</p>
+				</blockquote>
+				<p>
+					Anda dapat memberikan survei pelayanan kami melalui formulir dengan klik tombol di bawah ini
+				</p>
+					<a href="#" class="read-more align-self-start"><span>Isi Formulir Survey</span><i class="bi bi-arrow-right"></i></a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+@endsection
+
 </section><!-- End Recent Blog Posts Section -->
 @endsection
 

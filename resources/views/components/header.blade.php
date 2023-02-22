@@ -14,14 +14,21 @@
 				<li><a class="nav-link scrollto" href="/">Home</a></li>
 				<li class="dropdown"><a href="#"><span>Profil</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
 					<ul>
-						<li><a href="#">Profil Kantor</a></li>
-						<li><a href="#">Profil Pegawai</a></li>
+						<li><a href="/about">Profil Kantor</a></li>
+						<li><a href="/profil">Profil Pegawai</a></li>
 					</ul>
 				</li>
 				<li><a class="nav-link scrollto" href="index.html#services">Pelayanan</a></li>
 				<li><a class="nav-link scrollto" href="index.html#team">V-Office</a></li>
 				<li><a href="blog.html">e-Kasus</a></li>
 				<li><a class="nav-link scrollto" href="/#contact">Kontak</a></li>
+				<li class="dropdown"><a href="#"><span>Hubungi Kami</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+					<ul>
+						<li><a href="https://www.lapor.go.id/instansi/badan-kepegawaian-negara" target="_blank">Lapor BKN</a></li>
+						<li><a href="https://support-siasn.bkn.go.id/" target="_blank">Helpdesk SIASN</a></li>
+						<li><a href="/#contact">Kontak</a></li>
+					</ul>
+				</li>
 			</ul>
 			<i class="bi bi-list mobile-nav-toggle d-none"></i>
 		</nav><!-- .navbar -->

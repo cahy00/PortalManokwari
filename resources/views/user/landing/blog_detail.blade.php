@@ -1,22 +1,21 @@
 @extends('layout.layout')
 
+<div class="breadcrumbs">
+	<div class="container">
+		<br>
+		<div class="d-flex justify-content-between align-items-center">
+			<h2>Berita Kepegawaian</h2>
+			<ol>
+				<li><a href="/">Home</a></li>
+				<li>Berita Kepegawaian</li>
+			</ol>
+		</div>
+
+	</div>
+</div><!-- End Breadcrumbs -->
 @section('content-blog')
 		
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs">
-      <div class="container">
-				<br>
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Berita Kepegawaian</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li>Blog Details</li>
-          </ol>
-        </div>
-
-      </div>
-    </div><!-- End Breadcrumbs -->
 
     <!-- ======= Blog Details Section ======= -->
     <section id="blog" class="blog">
@@ -28,7 +27,7 @@
 
             <article class="blog-details">
 
-              <div class="post-img">
+              <div class="post-img" style="border-radius:10px">
                 <img src="../../{{$post->thumbnail}}" alt="Gambar tidak muncul" class="img-fluid">
               </div>
 
@@ -65,14 +64,14 @@
             <div class="post-author d-flex align-items-center">
               <img src="assets/img/blog/blog-author.jpg" class="rounded-circle flex-shrink-0" alt="">
               <div>
-                <h4>Jane Smith</h4>
+                <h4>Bidang Umum dan Humas Kanreg XIV</h4>
                 <div class="social-links">
-                  <a href="https://twitters.com/#"><i class="bi bi-twitter"></i></a>
+                  {{-- <a href="https://twitters.com/#"><i class="bi bi-twitter"></i></a>
                   <a href="https://facebook.com/#"><i class="bi bi-facebook"></i></a>
-                  <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a>
+                  <a href="https://instagram.com/#"><i class="biu bi-instagram"></i></a> --}}
                 </div>
                 <p>
-                  Itaque quidem optio quia voluptatibus dolorem dolor. Modi eum sed possimus accusantium. Quas repellat voluptatem officia numquam sint aspernatur voluptas. Esse et accusantium ut unde voluptas.
+									Semua media yang ada di dokumen ini sudah di filter atas dasar hukum dan tata krama dalam bermedia sosial. Kami berharap dapat memperoleh masukan dalam meningkatkan informasi kami melalui Portal Website ini
                 </p>
               </div>
             </div><!-- End post author -->
@@ -85,6 +84,7 @@
             <div class="sidebar">
 
               <div class="sidebar-item search-form">
+								<img src="{{asset('bkn/2.png')}}" alt="" class="img-fluid">
                 <h3 class="sidebar-title">Search</h3>
                 <form action="" class="mt-3">
                   <input type="text">

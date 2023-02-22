@@ -17,7 +17,7 @@
 
 			<div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
 				<div class="img">
-					<img src="bkn/sample.jpg" alt="" class="img-fluid">
+					<img src="bkn/sample.jpg" alt="" class="img-fluid" style="min-height: 320px; max-height:320px; min-width:340px;max-width:340px">
 				</div>
 			</div>
 

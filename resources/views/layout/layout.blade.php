@@ -53,9 +53,11 @@
 
 		@yield('content-blog')
 
+		@yield('content-survey')
+		<br>
+<br>
+<br>
 		@yield('footer')
-    
-
   </main>
 
   @include('components.footer')
