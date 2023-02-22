@@ -35,6 +35,8 @@
 
 				<!-- Template Main CSS File -->
 				<link href="{{asset('assets/css/main.css')}}" rel="stylesheet">
+				{{-- datatable --}}
+				<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.13.2/datatables.min.css"/>
 
 				@vite(['resources/css/app.css', 'resources/js/app.js'])
 				@inertiaHead
@@ -48,6 +50,10 @@
 					<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 					<div id="preloader"></div>
+
+				<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+					{{-- datatable --}}
+				<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.13.2/datatables.min.js"></script>
 				{{-- user script --}}
 				<!-- Vendor JS Files -->
 				<script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>

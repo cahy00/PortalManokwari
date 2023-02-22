@@ -26,7 +26,7 @@
                                     <th>#</th>
                                     <th>Judul</th>
                                     <th>Kategori</th>
-                                    <th>Thumbnail</th>
+                                    <!-- <th>Thumbnail</th> -->
                                     <th>Status</th>
                                     <th>Aksi</th>
                                 </tr>
@@ -36,13 +36,13 @@
                                     <td>1</td>
                                     <td>{{ posts.title }}</td>
                                     <td>{{ posts.category.title }}</td>
-                                    <td>
+                                    <!-- <td>
                                         <img
                                             v-bind:src="posts.thumbnail"
                                             class="img-thumbnail img-circle"
                                             style="width: 50%; height: 150px"
                                         />
-                                    </td>
+                                    </td> -->
                                     <td v-if="posts.status == 1">
                                         <span
                                             class="btn btn-pill btn-success btn-sm"
@@ -91,5 +91,13 @@ export default {
     props: {
         post: Object,
     },
+    created() {
+        $(document).ready(function () {
+            $("#datatablesSimple").DataTable({});
+        });
+    },
 };
 </script>
+<!-- processing: true, serverSide: true, ajax: "/test", columns: [ { data: "id",
+name: "id" }, { data: "title", name: "title" }, { data: "status", name: "status"
+}, ], -->

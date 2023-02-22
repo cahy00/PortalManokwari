@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Admin\PostResource;
 use App\Models\Category;
 use App\Models\Draft;
 use App\Models\Post;
@@ -10,6 +11,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Yajra\DataTables\Facades\DataTables;
 
 class PostController extends Controller
 {
@@ -21,6 +23,8 @@ class PostController extends Controller
     public function index()
     {		
 				$post = Post::with(['user', 'category'])->get();
+				// $resource = PostResource::collection($post);
+				// $post = DataTables::of(Post::query())->make()->toJson();
         return inertia('Admin/Post/Index', compact('post'));
     }
 
@@ -35,6 +39,7 @@ class PostController extends Controller
 				$user = User::all();
         return inertia('Admin/Post/Create', compact('user', 'category'));
     }
+
 
     /**
      * Store a newly created resource in storage.
