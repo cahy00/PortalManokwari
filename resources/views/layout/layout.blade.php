@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{asset('bkn/icon-garuda.ico')}}" rel="icon">
+  <link href="{{asset("bkn/icon-garuda.ico")}}" rel="icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

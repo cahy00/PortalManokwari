@@ -3,8 +3,8 @@
 	<div class="container">
 
 		<div class="section-header">
-			<h2>Contact Us</h2>
-			<p>Ea vitae aspernatur deserunt voluptatem impedit deserunt magnam occaecati dssumenda quas ut ad dolores adipisci aliquam.</p>
+			<h2>Kontak Kami</h2>
+			<p>Selalu siap dalam memberikan pelayanan maksimal kepada masyarakat</p>
 		</div>
 
 	</div>
@@ -21,8 +21,8 @@
 			<div class="col-lg-4">
 
 				<div class="info">
-					<h3>Get in touch</h3>
-					<p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.</p>
+					<h3>Wilayah Kerja</h3>
+					<p>Prov. Papua barat, Kota Sorong, Kab. Sorong Selatan, Kab. Kaimana, Kab. Manokwari, Kab. Pegunungan Arfak, Kab. Fakfak, Kab. Sorong, Kab. Raja Ampat, Kab. Teluk Bintuni, Kab. Manokwari Selatan, Kab. Tambrauw, Kab. Teluk Wondama dan Kab. Maybrat</p>
 
 					<div class="info-item d-flex">
 						<i class="bi bi-geo-alt flex-shrink-0"></i>
