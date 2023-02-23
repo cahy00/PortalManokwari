@@ -17,6 +17,11 @@ class AboutController extends Controller
         return view('user.about.index');
     }
 
+		public function profil()
+		{
+				return view('user.about.profil');
+		}
+
     /**
      * Show the form for creating a new resource.
      *

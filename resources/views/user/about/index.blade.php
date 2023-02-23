@@ -27,7 +27,7 @@
 
 			<div class="col-lg-5">
 				<div class="about-img">
-					<img src="{{asset('bkn/bknedit.jpg')}}" class="img-fluid" alt="">
+					<img src="{{asset('bkn/bknbaru.jpg')}}" class="img-fluid" alt="">
 				</div>
 			</div>
 
