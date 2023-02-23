@@ -12,7 +12,7 @@
 			<li class="nav-item col-6 col-md-4 col-lg-2">
 				<a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
 					<i class="bi bi-binoculars color-cyan"></i>
-					<h4>Kantor Regional XIV</h4>
+					<h4>Kanreg XIV</h4>
 				</a>
 			</li><!-- End Tab 1 Nav -->
 
@@ -26,14 +26,14 @@
 			<li class="nav-item col-6 col-md-4 col-lg-2">
 				<a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
 					<i class="bi bi-brightness-high color-teal"></i>
-					<h4>Bidang Mutasi</h4>
+					<h4>Mutasi</h4>
 				</a>
 			</li><!-- End Tab 3 Nav -->
 
 			<li class="nav-item col-6 col-md-4 col-lg-2">
 				<a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
 					<i class="bi bi-command color-red"></i>
-					<h4>Bidang Pensiun</h4>
+					<h4>Pensiun</h4>
 				</a>
 			</li><!-- End Tab 4 Nav -->
 
