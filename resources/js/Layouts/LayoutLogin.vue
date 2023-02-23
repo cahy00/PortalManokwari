@@ -1,19 +1,27 @@
 <template>
-    <div id="layoutAuthentication">
-        <div id="layoutAuthentication_content">
-            <main>
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-5">
-                            <div
-                                class="card shadow-lg border-0 rounded-lg mt-5"
-                            >
-                                <slot />
+    <div
+        class="main bg-primary"
+        style="
+            background-image: url('../../../bkn/bknbaru.jpg');
+            display: block;
+        "
+    >
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5">
+                                <div
+                                    class="card shadow-lg border-0 rounded-lg mt-5"
+                                >
+                                    <slot />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </main>
+                </main>
+            </div>
         </div>
     </div>
 </template>
