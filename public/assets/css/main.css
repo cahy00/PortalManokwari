@@ -146,7 +146,7 @@ h6 {
     font-weight: 700;
 }
 
-#hero .btn-get-started {
+/* #hero .btn-get-started {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -167,7 +167,7 @@ h6 {
     background: #1ababa;
     color: #fff;
     text-decoration: none;
-}
+} */
 
 #hero .carousel-inner .carousel-item {
     transition-property: opacity;
@@ -184,7 +184,7 @@ h6 {
 #hero .carousel-inner .carousel-item-next.carousel-item-start,
 #hero .carousel-inner .carousel-item-prev.carousel-item-end {
     opacity: 1;
-    transition: 0.1s;
+    transition: 10s;
 }
 
 #hero .carousel-inner .carousel-item-next,
@@ -228,7 +228,7 @@ h6 {
     height: 12px;
     border-radius: 50px;
     opacity: 0.6;
-    transition: 0.1s;
+    transition: 0.5s;
 }
 
 #hero .carousel-indicators li.active {
@@ -1559,7 +1559,7 @@ section {
             rgba(var(--color-black-rgb), 0.4),
             rgba(var(--color-black-rgb), 0.7)
         ),
-        url("../img/onfocus-video-bg.jpg") center center;
+        url("../../bkn/bkn_mkw.png") center center;
     background-size: cover;
 }
 

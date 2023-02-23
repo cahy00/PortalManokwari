@@ -2,24 +2,24 @@
 
 @section('content-hero')
 <section id="hero">
-	<div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+	<div id="heroCarousel" data-bs-interval="1000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
 		<div class="carousel-inner" role="listbox">
 
 			<!-- Slide 1 -->
-			<div class="carousel-item active" style="background-image: url(bkn/ba.png);">
+			<div class="carousel-item active" style="background-image: url(bkn/ba.png);" class="img-fluid">
 				<div class="carousel-container">
 					
 				</div>
 			</div>
 
 			@foreach ($hero as $hero)
-			<div class="carousel-item" style="background-image: url({{asset($hero->picture)}});">
+			<div class="carousel-item" style="background-image: url({{asset($hero->picture)}});" class="img-fluid">
 				
 			</div>
 			@endforeach
 			<!-- Slide 3 -->
-			<div class="carousel-item" style="background-image: url(bkn/MOTTO.jpg);">
+			<div class="carousel-item" style="background-image: url(bkn/MOTTO.jpg);" class="img-fluid">
 				{{-- <div class="carousel-container">
 					<div class="carousel-content">
 						<h2>Welcome to <span>Company</span></h2>
