@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\DraftController;
 use App\Http\Controllers\Admin\HeroesController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\User\AboutController;
 use App\Http\Controllers\User\LandingController;
 use App\Models\Post;
@@ -16,10 +18,6 @@ Route::get('/post/create', [PostController::class, 'create'])->name('post.create
 Route::post('/post/create', [PostController::class, 'store'])->name('post.store');
 Route::get('/post/show/{id}', [PostController::class, 'show'])->name('post.show');
 Route::get('/post/edit', [PostController::class, 'edit'])->name('post.edit');
-// Route::get('/test', function(){
-// 	// $post = App\Models\Post::query();
-// 	return DataTables::of(Post::query())->make(true);
-// });
 
 //route draft 
 Route::get('/draft', [DraftController::class, 'index'])->name('draft');
@@ -40,4 +38,7 @@ Route::get('/blog-detail/show/{id}', [LandingController::class, 'show'])->name('
 
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/profil', [AboutController::class, 'profil'])->name('profil');
+
+Route::get('/login', LoginController::class, 'login')->name('login');
+Route::get('/register', RegisterController::class, 'register');
 

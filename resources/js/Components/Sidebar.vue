@@ -65,6 +65,31 @@
                         </div>
                         Tag
                     </Link>
+                    <div class="sb-sidenav-menu-heading">Profil</div>
+                    <Link
+                        href="/employe"
+                        :class="{
+                            active: $page.url.startsWith('/employe'),
+                        }"
+                        class="nav-link"
+                    >
+                        <div class="sb-nav-link-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        Pegawai
+                    </Link>
+                    <Link
+                        href="/employe"
+                        :class="{
+                            active: $page.url.startsWith('/employe'),
+                        }"
+                        class="nav-link"
+                    >
+                        <div class="sb-nav-link-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        Unit Kerja
+                    </Link>
                     <div class="sb-sidenav-menu-heading">Interface</div>
                     <Link
                         href="/hero"
