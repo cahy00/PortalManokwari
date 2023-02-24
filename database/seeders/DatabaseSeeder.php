@@ -5,7 +5,11 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Category;
+use App\Models\Departement;
+use App\Models\Employe;
+use App\Models\FuncUnit;
 use App\Models\Post;
+use App\Models\Unit;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -27,7 +31,7 @@ class DatabaseSeeder extends Seeder
 
 				User::create([
 					'name' => 'Admin 14',
-					'email' => 'admin14@gmail.com',
+					'email' => 'adminkanreg@gmail.com',
 					'password' => bcrypt('12345')
 				]);
 
@@ -45,6 +49,28 @@ class DatabaseSeeder extends Seeder
 					'excerpt' => 'quasi dolores culpa unde nesciunt velit itaque fuga magni incidunt tenetur, nisi quis perspiciatis obcaecati atque nihil',
 					'thumbnail' => 'test.jpg',
 					'status' => 1
+				]);
+
+				Unit::create([
+					'name' => 'Bidang Informasi Kepegawaian'
+				]);
+
+				FuncUnit::create([
+					'unit_id' => 1,
+					'func_unit' => 'Membuat dan mengembangakan aplikasi untuk internal kantor'
+				]);
+
+				Departement::create([
+					'name'	=> 'Analis Sumber Daya Manusia'
+				]);
+
+				Employe::create([
+					'unit_id' => 1,
+					'departement_id' => 1,
+					'name' => 'Stacy Vidy Mamentu',
+					'nip' => '199609102022031002',
+					'jk' => 'P',
+					'photo' => 'photo.jpeg'
 				]);
     }
 }
