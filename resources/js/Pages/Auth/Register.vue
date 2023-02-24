@@ -67,12 +67,16 @@
                             type="password"
                             placeholder="Confirm password"
                             v-model="form.confirm_password"
+                            :class="{ 'is-invalid': errors.password }"
                         />
                         <label for="inputPasswordConfirm"
                             >Confirm Password<span style="color: red"
                                 >*</span
                             ></label
                         >
+                        <div class="invalid-feedback" v-if="errors.password">
+                            {{ errors.password }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -109,13 +113,17 @@ export default {
     },
     methods: {
         register() {
+            // console.log(this.form.name),
+            //     console.log(this.form.email),
+            //     console.log(this.form.password),
+            //     console.log(this.form.confirm_password);
             Inertia.post(
                 "/register",
                 {
                     name: this.form.name,
                     email: this.form.email,
                     password: this.form.password,
-                    confirm_password: this.form.confirm_password,
+                    // confirm_password: this.form.confirm_password,
                 },
                 {
                     onSuccess: () => {

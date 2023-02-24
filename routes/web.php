@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\DraftController;
 use App\Http\Controllers\Admin\HeroesController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\User\AboutController;
 use App\Http\Controllers\User\LandingController;
@@ -14,8 +15,7 @@ use Yajra\DataTables\Facades\DataTables;
 
 Route::middleware('auth')->group(function(){
 
-    Route::post('/login', [LoginController::class, 'authenticate']);
-    Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+    
     //route post
     Route::get('/post', [PostController::class, 'index'])->name('post');
     Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
@@ -33,11 +33,9 @@ Route::middleware('auth')->group(function(){
 });
 
 
-Route::prefix('admin')->group(function(){});
+// Route::prefix('admin')->group(function(){});
 
-Route::prefix('user')->group(function(){
-	
-});
+// Route::prefix('user')->group(function(){});
 
 Route::get('/', [LandingController::class, 'index']);
 Route::get('/blog-detail/show/{id}', [LandingController::class, 'show'])->name('blog.show');
@@ -47,4 +45,7 @@ Route::get('/profil', [AboutController::class, 'profil'])->name('profil');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/logout', [LogoutController::class, 'index'])->name('logout');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 

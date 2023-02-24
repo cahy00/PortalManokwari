@@ -76,9 +76,9 @@
 
   <!-- Template Main JS File -->
   <script src="{{asset('assets/js/main.js')}}"></script>
-	<script>
+	{{-- <script>
 		alert('Untuk Pengalaman yang lebih baik gunakan browser terbaru')
-	</script>
+	</script> --}}
 </body>
 
 </html>
