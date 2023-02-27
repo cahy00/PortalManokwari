@@ -24,6 +24,7 @@
 						<li><a href="/#services" class="nav-link scrollto">Kopace</a></li>
 					</ul>
 				</li>
+				<li><a class="nav-link scrollto" href="/galeri">Galeri</a></li>
 				<li class="dropdown"><a href="#"><span>Aplikasi Kanreg</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
 					<ul>
 						<li><a href="https://www.dashboard.bkn14.site">Dashboard Kepegawaian</a></li>

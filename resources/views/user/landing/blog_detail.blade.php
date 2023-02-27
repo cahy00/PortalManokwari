@@ -28,7 +28,7 @@
             <article class="blog-details">
 
               <div class="post-img" style="border-radius:10px">
-                <img src="../../{{$post->thumbnail}}" alt="Gambar tidak muncul" class="img-fluid">
+                <img src="../../{{$post->thumbnail}}" alt="Gambar tidak muncul" class="img-fluid" style="min-height: auto; max-height:auto; min-width:100%;max-width:100%">
               </div>
 
               <h2 class="title">{{$post->title}}</h2>
@@ -48,7 +48,7 @@
               <div class="meta-bottom">
                 <i class="bi bi-folder"></i>
                 <ul class="cats">
-                  <li><a href="#">Business</a></li>
+                  <li><a href="#">{{$post->category->title}}</a></li>
                 </ul>
 
                 <i class="bi bi-tags"></i>
@@ -62,7 +62,7 @@
             </article><!-- End blog post -->
 
             <div class="post-author d-flex align-items-center">
-              <img src="assets/img/blog/blog-author.jpg" class="rounded-circle flex-shrink-0" alt="">
+              <img src="{{asset('assets/img/blog/blog-author.jpg')}}" class="rounded-circle flex-shrink-0" alt="">
               <div>
                 <h4>Bidang Umum dan Humas Kanreg XIV</h4>
                 <div class="social-links">
@@ -75,6 +75,37 @@
                 </p>
               </div>
             </div><!-- End post author -->
+
+            <div class="comments">
+              <div class="reply-form">
+  
+                <h4>Leave a Reply</h4>
+                <p>Your email address will not be published. Required fields are marked * </p>
+                <form action="">
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input name="name" type="text" class="form-control" placeholder="Your Name*" disabled>
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <input name="email" type="text" class="form-control" placeholder="Your Email*" disabled>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <input name="website" type="text" class="form-control" placeholder="Your Website" disabled>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <textarea name="comment" class="form-control" placeholder="Your Comment*" disabled></textarea>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Post Comment</button>
+  
+                </form>
+  
+              </div>
+            </div>
 
 
           </div>

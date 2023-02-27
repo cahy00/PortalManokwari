@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
-use App\Models\Hero;
 use Illuminate\Http\Request;
-use App\Models\Post;
 
-class LandingController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,36 +14,7 @@ class LandingController extends Controller
      */
     public function index()
     {
-				$post = Post::with(['category', 'user'])
-				->where([
-                    ['category_id', 1],
-                    // ['is_headline', 0]
-                ])
-                // ->where('is_headline', 0)
-                // ->where('category_id', 1)
-                ->orderBy('created_at', 'DESC')
-				->limit(3)
-				->get();
-
-				$artikel = Post::with(['category', 'user'])
-				->where('category_id', '>', 1)
-				->limit(6)
-				->get();
-
-                $headline = Post::with(['category', 'user'])
-                ->where('is_headline', 1)
-                ->limit(1)
-                ->get();
-
-				$hero = Hero::all();
-        return view('/user/landing/index', compact('post', 'artikel', 'hero', 'headline'));
-
-    }
-
-    public function galeri()
-    {
-        $post = Post::with(['category', 'user'])->get();
-        return view('/user/landing/galeri', compact('post'));
+        //
     }
 
     /**
@@ -78,11 +46,7 @@ class LandingController extends Controller
      */
     public function show($id)
     {
-				$post = Post::findOrFail($id);
-				$allpost = Post::all();
-				$allcategory = Category::all();
-				// dd($post);
-        return view('user.landing.blog_detail', compact('post', 'allpost', 'allcategory'));
+        //
     }
 
     /**

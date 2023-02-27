@@ -142,7 +142,7 @@
 		<div class="row">
 
 			@foreach ($post as $item)
-				@if ($item->category_id == 1)
+				@if ($item->is_headline == false)
 					<div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
 						<div class="post-box">
 							<div class="post-img">

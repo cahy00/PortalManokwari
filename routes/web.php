@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\DraftController;
@@ -31,6 +32,9 @@ Route::middleware('auth')->group(function(){
         Route::get('/draft/show/{id}', [DraftController::class, 'show'])->name('draft.show');
         Route::get('/draft/edit/{id}', [DraftController::class, 'edit'])->name('draft.edit');
         Route::put('/draft/update/{id}', [DraftController::class, 'update'])->name('draft.update');
+
+        //route category
+        Route::get('/category', [CategoryController::class, 'index'])->name('category');
         
         //route hero
         Route::get('/hero', [HeroesController::class, 'index'])->name('hero');
@@ -50,6 +54,7 @@ Route::get('/blog-detail/show/{id}', [LandingController::class, 'show'])->name('
 
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/profil', [AboutController::class, 'profil'])->name('profil');
+Route::get('/galeri', [LandingController::class, 'galeri'])->name('galeri');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/register', [RegisterController::class, 'index']);
