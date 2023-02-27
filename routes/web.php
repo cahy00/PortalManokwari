@@ -28,6 +28,9 @@ Route::middleware('auth')->group(function(){
         
         //route draft 
         Route::get('/draft', [DraftController::class, 'index'])->name('draft');
+        Route::get('/draft/show/{id}', [DraftController::class, 'show'])->name('draft.show');
+        Route::get('/draft/edit/{id}', [DraftController::class, 'edit'])->name('draft.edit');
+        Route::put('/draft/update/{id}', [DraftController::class, 'update'])->name('draft.update');
         
         //route hero
         Route::get('/hero', [HeroesController::class, 'index'])->name('hero');

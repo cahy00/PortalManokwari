@@ -35,7 +35,9 @@
                                     <td>{{ drafts.category.title }}</td>
                                     <td>
                                         <img
-                                            v-bind:src="drafts.thumbnail"
+                                            v-bind:src="
+                                                '../' + drafts.thumbnail
+                                            "
                                             class="img-thumbnail img-circle"
                                             style="width: 50%; height: 150px"
                                         />
@@ -55,7 +57,7 @@
                                     <!-- <td v-html="drafts.body"></td> -->
                                     <td>
                                         <Link
-                                            :href="`/admin/show/${drafts.id}`"
+                                            :href="`/admin/draft/show/${drafts.id}`"
                                             class="btn btn-default"
                                             ><i class="fa fa-plus-circle"></i
                                             >Show</Link
