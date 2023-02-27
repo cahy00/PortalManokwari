@@ -5,7 +5,7 @@
                 <div class="nav">
                     <div class="sb-sidenav-menu-heading">Core</div>
                     <Link
-                        href="/"
+                        href="/admin/dashboard"
                         :class="{
                             active: $page.url.startsWith('/admin/dashboard'),
                         }"
@@ -30,9 +30,9 @@
                         Postingan
                     </Link>
                     <Link
-                        href="/draft"
+                        href="/admin/draft"
                         :class="{
-                            active: $page.url.startsWith('/draft'),
+                            active: $page.url.startsWith('/admin/draft'),
                         }"
                         class="nav-link"
                     >
@@ -67,9 +67,9 @@
                     </Link>
                     <div class="sb-sidenav-menu-heading">Profil</div>
                     <Link
-                        href="/employe"
+                        href="/admin/employe"
                         :class="{
-                            active: $page.url.startsWith('/employe'),
+                            active: $page.url.startsWith('/admin/employe'),
                         }"
                         class="nav-link"
                     >
@@ -79,9 +79,9 @@
                         Pegawai
                     </Link>
                     <Link
-                        href="/employe"
+                        href="/admin/departement"
                         :class="{
-                            active: $page.url.startsWith('/employe'),
+                            active: $page.url.startsWith('/admin/departement'),
                         }"
                         class="nav-link"
                     >
@@ -94,7 +94,7 @@
                     <Link
                         href="/admin/hero"
                         :class="{
-                            active: $page.url.startsWith('/hero'),
+                            active: $page.url.startsWith('/admin/hero'),
                         }"
                         class="nav-link"
                     >

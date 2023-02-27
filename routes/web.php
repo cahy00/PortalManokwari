@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\DraftController;
 use App\Http\Controllers\Admin\HeroesController;
@@ -16,6 +17,8 @@ use Yajra\DataTables\Facades\DataTables;
 Route::middleware('auth')->group(function(){
 
     Route::prefix('admin')->group(function(){
+        //route dashboard
+        Route::get('/dashboard', [DashboardController::class, '__invoke'])->name('dashboard');
         //route post
         Route::get('/post', [PostController::class, 'index'])->name('post');
         Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
@@ -32,8 +35,6 @@ Route::middleware('auth')->group(function(){
         Route::post('/hero/create', [HeroesController::class, 'store'])->name('hero.store');
         
     });
-
-
     
 });
 
