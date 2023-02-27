@@ -24,4 +24,5 @@
 		</div>
 
 	</div>
-</section><!-- End Call To Action Section -->
+</section>
+<!-- End Call To Action Section -->

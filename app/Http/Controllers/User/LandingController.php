@@ -19,6 +19,7 @@ class LandingController extends Controller
     {
 				$post = Post::with(['category', 'user'])
 				->where('category_id', 1)
+                ->where('is_headline', 0)
 				->orderBy('created_at', 'DESC')
 				->take(3)
 				->get();
@@ -28,8 +29,13 @@ class LandingController extends Controller
 				->limit(6)
 				->get();
 
+                $headline = Post::with(['category', 'user'])
+                ->where('is_headline', 1)
+                ->limit(1)
+                ->get();
+
 				$hero = Hero::all();
-        return view('/user/landing/index', compact('post', 'artikel', 'hero'));
+        return view('/user/landing/index', compact('post', 'artikel', 'hero', 'headline'));
 
     }
 

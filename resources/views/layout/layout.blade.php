@@ -49,6 +49,10 @@
 
 		@yield('content')
 
+    @yield('content-cta')
+
+    @yield('content-feature')
+
 		@yield('content-service')
 
 		@yield('content-blog')

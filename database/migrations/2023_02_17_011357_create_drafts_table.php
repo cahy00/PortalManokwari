@@ -15,14 +15,15 @@ return new class extends Migration
     {
         Schema::create('drafts', function (Blueprint $table) {
             $table->id();
-						$table->foreignId('category_id')->references('id')->on('categories')->cascadeOnDelete();
-						$table->foreignId('user_id')->references('id')->on('users')->cascadeOnDelete();
-						$table->string('title');
-						$table->string('slug');
-						$table->text('excerpt');
-						$table->text('body');
-						$table->string('thumbnail')->nullable();
-						$table->enum('status', [0, 1]);
+            $table->foreignId('category_id')->references('id')->on('categories')->cascadeOnDelete();
+            $table->foreignId('user_id')->references('id')->on('users')->cascadeOnDelete();
+            $table->string('title');
+            $table->string('slug');
+            $table->text('excerpt');
+            $table->text('body');
+            $table->string('thumbnail')->nullable();
+            $table->enum('status', [0, 1]);
+            $table->boolean('is_headline')->nullable()->default(false);
             $table->timestamps();
         });
     }

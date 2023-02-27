@@ -17,7 +17,8 @@ class Draft extends Model
 			'slug',
 			'excerpt',
 			'thumbnail',
-			'status'
+			'status',
+			'is_headline'
 
 		];
 
