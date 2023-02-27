@@ -88,5 +88,10 @@ export default {
     props: {
         draft: Object,
     },
+    created() {
+        $(document).ready(function () {
+            $("#datatablesSimple").DataTable({});
+        });
+    },
 };
 </script>

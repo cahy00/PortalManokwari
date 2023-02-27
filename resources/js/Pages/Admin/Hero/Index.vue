@@ -10,7 +10,7 @@
                         <div class="row">
                             <div class="col-8">
                                 <Link
-                                    href="/hero/create"
+                                    href="/admin/hero/create"
                                     class="btn btn-md btn-primary"
                                     ><i class="fas fa-plus"></i>
                                     Tambah

@@ -117,7 +117,7 @@ export default {
     methods: {
         submit() {
             Inertia.post(
-                "/hero/create",
+                "/admin/hero/create",
                 {
                     title: this.form.title,
                     picture: this.form.picture,

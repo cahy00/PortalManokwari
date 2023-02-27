@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-6">
-                                <Link href="/post" class="btn btn-success"
+                                <Link href="/admin/post" class="btn btn-success"
                                     ><i
                                         class="fa fa-angle-left"
                                         aria-hidden="true"
@@ -215,7 +215,7 @@ export default {
     methods: {
         submit() {
             Inertia.post(
-                "/post/create",
+                "/admin/post/create",
                 {
                     title: this.form.title,
                     category_id: this.form.category_id,

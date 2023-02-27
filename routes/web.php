@@ -16,22 +16,22 @@ use Yajra\DataTables\Facades\DataTables;
 Route::middleware('auth')->group(function(){
 
     Route::prefix('admin')->group(function(){
+        //route post
+        Route::get('/post', [PostController::class, 'index'])->name('post');
+        Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
+        Route::post('/post/create', [PostController::class, 'store'])->name('post.store');
+        Route::get('/post/show/{id}', [PostController::class, 'show'])->name('post.show');
+        Route::get('/post/edit/{id}', [PostController::class, 'edit'])->name('post.edit');
+        
+        //route draft 
+        Route::get('/draft', [DraftController::class, 'index'])->name('draft');
+        
+        //route hero
+        Route::get('/hero', [HeroesController::class, 'index'])->name('hero');
+        Route::get('/hero/create', [HeroesController::class, 'create'])->name('hero.create');
+        Route::post('/hero/create', [HeroesController::class, 'store'])->name('hero.store');
         
     });
-    //route post
-    Route::get('/post', [PostController::class, 'index'])->name('post');
-    Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
-    Route::post('/post/create', [PostController::class, 'store'])->name('post.store');
-    Route::get('/post/show/{id}', [PostController::class, 'show'])->name('post.show');
-    Route::get('/post/edit', [PostController::class, 'edit'])->name('post.edit');
-    
-    //route draft 
-    Route::get('/draft', [DraftController::class, 'index'])->name('draft');
-    
-    //route hero
-    Route::get('/hero', [HeroesController::class, 'index'])->name('hero');
-    Route::get('/hero/create', [HeroesController::class, 'create'])->name('hero.create');
-    Route::post('/hero/create', [HeroesController::class, 'store'])->name('hero.store');
 
 
     

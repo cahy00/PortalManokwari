@@ -19,7 +19,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <h5><i class="fa fa-bookmark"></i> Detail Postingan</h5>
+                        <h5><i class="fa fa-bookmark"></i> Edit Postingan</h5>
                         <hr />
                         <form @submit.prevent="submit">
                             <div class="row">
@@ -34,7 +34,8 @@
                                             }"
                                             v-model="form.title"
                                             id="title"
-                                            disabled
+                                            placeholder="Masukkan judul"
+                                            autofocus
                                         />
                                         <div
                                             class="invalid-feedback"
@@ -57,7 +58,6 @@
                                                 'is-invalid':
                                                     errors.category_id,
                                             }"
-                                            disabled
                                         >
                                             <option
                                                 v-for="categories in category"
@@ -90,7 +90,7 @@
                                                 form.thumbnail =
                                                     $event.target.files[0]
                                             "
-                                            disabled
+                                            ref="fileInput"
                                         />
                                         <div
                                             v-if="errors.thumbnail"
@@ -124,7 +124,6 @@
                                             id="status"
                                             class="form-select"
                                             v-model="form.status"
-                                            disabled
                                         >
                                             <option value="0">Draft</option>
                                             <option value="1">Posting</option>
@@ -140,7 +139,6 @@
                                                 role="switch"
                                                 id="flexSwitchCheckDefault"
                                                 v-model="form.is_headline"
-                                                disabled
                                             />
                                             <label
                                                 class="form-check-label"
@@ -169,7 +167,6 @@
                                     :class="{
                                         'is-invalid': errors.description,
                                     }"
-                                    disabled
                                 />
                                 <div
                                     v-if="errors.body"
@@ -179,12 +176,18 @@
                                 </div>
                             </div>
 
-                            <Link
+                            <button
+                                type="submit"
+                                class="btn btn-primary btn-md border-0 shadow me-2"
+                            >
+                                Simpan
+                            </button>
+                            <button
+                                type="reset"
                                 class="btn btn-warning btn-md border-0 shadow me-2"
-                                :href="`/admin/post/edit/${post.id}`"
-                                ><i class="fa fa-pencil-alt"></i>
-                                Edit
-                            </Link>
+                            >
+                                Reset
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -224,6 +227,46 @@ export default {
             },
             imageData: null,
         };
+    },
+    methods: {
+        submit() {
+            Inertia.post(
+                "/post/create",
+                {
+                    title: this.form.title,
+                    category_id: this.form.category_id,
+                    body: this.form.body,
+                    thumbnail: this.form.thumbnail,
+                    status: this.form.status,
+                    is_headline: this.form.is_headline,
+                },
+                {
+                    onSuccess: () => {
+                        Swal.fire({
+                            title: "Success!",
+                            text: "Postingan Berhasil Disimpan.",
+                            icon: "success",
+                            showConfirmButton: false,
+                            timer: 2000,
+                        });
+                    },
+                }
+            );
+        },
+
+        // previewImage() {
+        //     const image = document.querySelector("#image");
+        //     const imgPreview = document.querySelector(".img-preview");
+
+        //     imgPreview.style.display = "block";
+
+        //     const oFReader = new FileReader();
+        //     oFReader.readAsDataURL(image.files[0]);
+
+        //     oFReader.onload = function (oFREvent) {
+        //         imgPreview.src = oFREvent.target.result;
+        //     };
+        // },
     },
 };
 </script>

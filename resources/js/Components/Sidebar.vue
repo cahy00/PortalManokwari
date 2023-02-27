@@ -18,9 +18,9 @@
                     </Link>
                     <div class="sb-sidenav-menu-heading">Modul</div>
                     <Link
-                        href="/post"
+                        href="/admin/post"
                         :class="{
-                            active: $page.url.startsWith('/post'),
+                            active: $page.url.startsWith('/admin/post'),
                         }"
                         class="nav-link"
                     >
@@ -92,7 +92,7 @@
                     </Link>
                     <div class="sb-sidenav-menu-heading">Interface</div>
                     <Link
-                        href="/hero"
+                        href="/admin/hero"
                         :class="{
                             active: $page.url.startsWith('/hero'),
                         }"

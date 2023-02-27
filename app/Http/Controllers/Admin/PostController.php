@@ -79,6 +79,9 @@ class PostController extends Controller
                 'status' 			=> $request->status,
                 'is_headline'       => $request->is_headline
             ]);
+
+        return redirect()->route('post');
+
         }else{
             if($request->file('thumbnail')->isValid())
             {
@@ -101,9 +104,11 @@ class PostController extends Controller
                 'is_headline'       => $request->is_headline
 
             ]);
+
+        return redirect()->route('draft');
+
         }
 
-        return redirect()->route('post');
     }
 		
 
@@ -115,8 +120,9 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $post = Post::findOrFail($id)->with(['user', 'category']);
-				return inertia('Admin/Post/Show', compact('post'));
+        $post = Post::findOrFail($id);
+        $category = Category::all();
+        return inertia('Admin/Post/Show', compact('post', 'category'));
     }
 
     /**
@@ -127,7 +133,9 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        $category = Category::all();
+        return inertia('Admin/Post/Edit', compact('post', 'category'));
     }
 
     /**

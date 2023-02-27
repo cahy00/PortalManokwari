@@ -10,7 +10,7 @@
                         <div class="row">
                             <div class="col-8">
                                 <Link
-                                    href="/post/create"
+                                    href="/admin/post/create"
                                     class="btn btn-md btn-primary"
                                     ><i class="fas fa-plus"></i>
                                     Tambah
@@ -58,7 +58,7 @@
                                     <!-- <td v-html="posts.body"></td> -->
                                     <td>
                                         <Link
-                                            :href="`/post/show/${posts.id}`"
+                                            :href="`/admin/post/show/${posts.id}`"
                                             class="btn btn-default"
                                             ><i class="fa fa-plus-circle"></i
                                             >Show</Link
