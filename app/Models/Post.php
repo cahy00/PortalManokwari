@@ -17,9 +17,11 @@ class Post extends Model
 			'slug',
 			'excerpt',
 			'thumbnail',
-			'status'
+			'status',
+			'is_headline'
 
 		];
+		
 
 		public function category()
 		{

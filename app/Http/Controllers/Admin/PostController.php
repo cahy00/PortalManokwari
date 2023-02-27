@@ -9,6 +9,7 @@ use App\Models\Draft;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Yajra\DataTables\Facades\DataTables;
@@ -22,9 +23,9 @@ class PostController extends Controller
      */
     public function index()
     {		
-				$post = Post::with(['user', 'category'])->get();
-				// $resource = PostResource::collection($post);
-				// $post = DataTables::of(Post::query())->make()->toJson();
+        $post = Post::with(['user', 'category'])->get();
+        // $resource = PostResource::collection($post);
+        // $post = DataTables::of(Post::query())->make()->toJson();
         return inertia('Admin/Post/Index', compact('post'));
     }
 
@@ -35,8 +36,8 @@ class PostController extends Controller
      */
     public function create()
     {
-				$category = Category::all();
-				$user = User::all();
+		$category = Category::all();
+		$user = User::all();
         return inertia('Admin/Post/Create', compact('user', 'category'));
     }
 
@@ -50,56 +51,59 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-					'title' 			=> 'required|string|max:50',
-					'body' 				=> 'required',
-					'category_id' => 'required',
-					'thumbnail' 	=> 'required|mimes:jpg,jpeg,png',
+        'title' 			=> 'required|string|max:50',
+        'body' 				=> 'required',
+        'category_id'       => 'required',
+        'thumbnail' 	    => 'required|mimes:jpg,jpeg,png',
 
-				]);
+        ]);
 
-				if($request->status == 1){
-					if($request->file('thumbnail')->isValid())
-					{
-						$file 			= $request->file('thumbnail');
-						$name 			= date('YmdHis');
-						$extension 	= $file->getClientOriginalExtension();
-						$newName 		= $name . "." . $extension;
-						$uploads   	= Storage::putFileAs('public/thumbnail', $request->file('thumbnail'), $newName);
-					}
+        if($request->status == 1){
+            if($request->file('thumbnail')->isValid())
+            {
+                $file 			    = $request->file('thumbnail');
+                $name 			    = date('YmdHis');
+                $extension 	        = $file->getClientOriginalExtension();
+                $newName 		    = $name . "." . $extension;
+                $uploads   	        = Storage::putFileAs('public/thumbnail', $request->file('thumbnail'), $newName);
+            }
 
-					$post = Post::create([
-						'title' 			=> $request->title,
-						'slug'  			=> Str::slug($request->title),
-						'category_id' => $request->category_id,
-						'user_id' 		=> 1,
-						'body' 				=> $request->body,
-						'excerpt' 		=> Str::limit(strip_tags($request->body, '150')),
-						'thumbnail' 	=> 'storage/thumbnail/'. $newName,
-						'status' 			=> $request->status
-					]);
-				}else{
-					if($request->file('thumbnail')->isValid())
-					{
-						$file 				= $request->file('thumbnail');
-						$name 				= date('YmdHis');
-						$extension 		= $file->getClientOriginalExtension();
-						$newName 			= $name . "." . $extension;
-						$uploads   		= Storage::putFileAs('public/thumbnail', $request->file('thumbnail'), $newName);
-					}
+            $post = Post::create([
+                'title' 			=> $request->title,
+                'slug'  			=> Str::slug($request->title),
+                'category_id'       => $request->category_id,
+                'user_id' 		    => auth()->user()->id,
+                'body' 				=> $request->body,
+                'excerpt' 		    => Str::limit(strip_tags($request->body, '150')),
+                'thumbnail' 	    => 'storage/thumbnail/'. $newName,
+                'status' 			=> $request->status,
+                'is_headline'       => $request->is_headline
+            ]);
+        }else{
+            if($request->file('thumbnail')->isValid())
+            {
+                $file 				= $request->file('thumbnail');
+                $name 				= date('YmdHis');
+                $extension 		    = $file->getClientOriginalExtension();
+                $newName 			= $name . "." . $extension;
+                $uploads   		    = Storage::putFileAs('public/thumbnail', $request->file('thumbnail'), $newName);
+            }
 
-					$draft = Draft::create([
-						'title' 			=> $request->title,
-						'slug'  			=> Str::slug($request->title),
-						'category_id' => $request->category_id,
-						'user_id' 		=> 1,
-						'body' 				=> $request->body,
-						'excerpt' 		=> Str::limit(strip_tags($request->body, '150')),
-						'thumbnail' 	=> 'storage/thumbnail/'. $newName,
-						'status' 			=> $request->status
-					]);
-				}
+            $draft = Draft::create([
+                'title' 			=> $request->title,
+                'slug'  			=> Str::slug($request->title),
+                'category_id'       => $request->category_id,
+                'user_id' 		    => auth()->user()->id,
+                'body' 				=> $request->body,
+                'excerpt' 		    => Str::limit(strip_tags($request->body, '150')),
+                'thumbnail' 	    => 'storage/thumbnail/'. $newName,
+                'status' 			=> $request->status,
+                'is_headline'       => $request->is_headline
 
-				return redirect()->route('post');
+            ]);
+        }
+
+        return redirect()->route('post');
     }
 		
 

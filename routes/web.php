@@ -15,7 +15,9 @@ use Yajra\DataTables\Facades\DataTables;
 
 Route::middleware('auth')->group(function(){
 
-    
+    Route::prefix('admin')->group(function(){
+        
+    });
     //route post
     Route::get('/post', [PostController::class, 'index'])->name('post');
     Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
@@ -30,10 +32,12 @@ Route::middleware('auth')->group(function(){
     Route::get('/hero', [HeroesController::class, 'index'])->name('hero');
     Route::get('/hero/create', [HeroesController::class, 'create'])->name('hero.create');
     Route::post('/hero/create', [HeroesController::class, 'store'])->name('hero.store');
+
+
+    
 });
 
 
-// Route::prefix('admin')->group(function(){});
 
 // Route::prefix('user')->group(function(){});
 

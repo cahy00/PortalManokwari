@@ -23,6 +23,7 @@ return new class extends Migration
 					$table->text('body');
 					$table->string('thumbnail')->nullable();
 					$table->enum('status', [0, 1]);
+                    $table->boolean('is_headline')->nullable()->default(false);
 					$table->timestamps();
 				});
     }

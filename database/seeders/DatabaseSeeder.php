@@ -48,7 +48,8 @@ class DatabaseSeeder extends Seeder
 					'slug' => 'ini-contoh',
 					'excerpt' => 'quasi dolores culpa unde nesciunt velit itaque fuga magni incidunt tenetur, nisi quis perspiciatis obcaecati atque nihil',
 					'thumbnail' => 'test.jpg',
-					'status' => 1
+					'status' => 1,
+					'is_headline' => false
 				]);
 
 				Unit::create([

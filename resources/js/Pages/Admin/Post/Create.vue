@@ -145,6 +145,22 @@
                                     {{ errors.body }}
                                 </div>
                             </div>
+                            <div class="mb-4">
+                                <div class="form-check form-switch">
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        role="switch"
+                                        id="flexSwitchCheckDefault"
+                                        v-model="form.is_headline"
+                                    />
+                                    <label
+                                        class="form-check-label"
+                                        for="flexSwitchCheckDefault"
+                                        >Headline</label
+                                    >
+                                </div>
+                            </div>
                             <button
                                 type="submit"
                                 class="btn btn-primary btn-md border-0 shadow me-2"
@@ -191,6 +207,7 @@ export default {
                 body: "",
                 thumbnail: "",
                 status: "",
+                is_headline: "",
             },
             imageData: null,
         };
@@ -205,6 +222,7 @@ export default {
                     body: this.form.body,
                     thumbnail: this.form.thumbnail,
                     status: this.form.status,
+                    is_headline: this.form.is_headline,
                 },
                 {
                     onSuccess: () => {
