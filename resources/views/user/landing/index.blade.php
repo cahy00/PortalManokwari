@@ -66,7 +66,7 @@
 			<div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
 				<h3>{{$headline->title}}</h3>
 				<p>{{$headline->excerpt}}</p>
-				<a class="cta-btn align-self-start" href="{{route('blog.show', $headline->id)}}">Selengkapnya</a>
+				<a class="cta-btn align-self-start" href="{{route('blog.show', [$hash->encodeHex($headline->id)])}}">Selengkapnya</a>
 			</div>
 
 			<div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
@@ -112,7 +112,7 @@
 					<div class="icon">
 						<i class="bi bi-broadcast"></i>
 					</div>
-					<a href="{{route('blog.show', $artikel->id)}}" class="stretched-link">
+					<a href="{{route('blog.show', [$hash->encodeHex($artikel->id)])}}" class="stretched-link">
 						<h3>{{$artikel->title}}</h3>
 						<p>{{$artikel->excerpt}}</p>
 					</a>
@@ -154,7 +154,7 @@
 							</div>
 							<h3 class="post-title"> <a href=""></a> {{$item->title}} </h3>
 							<p>{{$item->excerpt}}</p>
-							<a href="{{route('blog.show', $item->id)}}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+							<a href="/blog-detail/show/{{$hash->encodeHex($item->id)}}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 						</div>
 					</div>
 				@endif

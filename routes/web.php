@@ -46,7 +46,6 @@ Route::middleware('auth')->group(function(){
 });
 
 
-
 // Route::prefix('user')->group(function(){});
 
 Route::get('/', [LandingController::class, 'index']);
