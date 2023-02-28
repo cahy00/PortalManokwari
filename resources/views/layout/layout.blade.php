@@ -66,7 +66,10 @@
 
   @include('components.footer')
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  {{-- <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> --}}
+  <div style="" class="scroll-top d-flex align-items-center justify-content-center">
+    <a href="https://wa.me/6282312345678/?text=Hi,%20Admin." target="_blank" rel="noopener">
+    <img src="https://insantri.com/wp-content/uploads/2021/09/WA-logo@65x.png" width="30" height="30" alt="Hubungi Kami Melalui WhatsApp"></a></div>
 
   <div id="preloader"></div>
 
