@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class CategoryController extends Controller
 {
@@ -14,7 +16,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+				$category = Category::all();
+        return inertia('Admin/Category/Index', compact('category'));
     }
 
     /**
@@ -23,8 +26,9 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {		
+				$category = Category::orderBy('created_at', 'DESC')->limit(5)->get();
+        return inertia('Admin/Category/Create', compact('category'));
     }
 
     /**
@@ -35,7 +39,16 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+					'title' => 'required'
+				]);
+
+				$category = Category::create([
+					'title' => $request->title,
+					'slug' => Str::slug($request->title)
+				]);
+
+				return redirect()->route('category.create');
     }
 
     /**

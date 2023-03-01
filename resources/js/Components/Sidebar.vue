@@ -42,9 +42,11 @@
                         Draft Postingan
                     </Link>
                     <Link
-                        href="/admin/lesson"
+                        href="/admin/category/create"
                         :class="{
-                            active: $page.url.startsWith('/admin/lesson'),
+                            active: $page.url.startsWith(
+                                '/admin/category/create'
+                            ),
                         }"
                         class="nav-link"
                     >

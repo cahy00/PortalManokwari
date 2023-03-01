@@ -31,24 +31,24 @@
 								<div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
 									<div class="team-member">
 										<div class="member-img">
-											<img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+											<img src="{{asset('bkn/diana.jpg')}}" class="img-fluid" alt="" style="min-height: auto; max-height:auto; min-width:420px;max-width:420px">
 										</div>
 										<div class="member-info">
-											<div class="social">
+											{{-- <div class="social">
 												<a href=""><i class="bi bi-twitter"></i></a>
 												<a href=""><i class="bi bi-facebook"></i></a>
 												<a href=""><i class="bi bi-instagram"></i></a>
 												<a href=""><i class="bi bi-linkedin"></i></a>
-											</div>
-											<h4>Walter White</h4>
-											<span>Chief Executive Officer</span>
+											</div> --}}
+											<h4>Hardianawati,S.E</h4>
+											<span>Kepala Kantor Regional XIV</span>
 										</div>
 									</div>
 								</div>
 								<div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
 									<div class="team-member">
 										<div class="member-img">
-											<img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+											<img src="{{asset('bkn/matan3.png')}}" class="img-fluid" alt="" style="min-height: 445px; max-height:445px; min-width:410px;max-width:410px">
 										</div>
 										<div class="member-info">
 											<div class="social">
@@ -57,15 +57,15 @@
 												<a href=""><i class="bi bi-instagram"></i></a>
 												<a href=""><i class="bi bi-linkedin"></i></a>
 											</div>
-											<h4>Walter White</h4>
-											<span>Chief Executive Officer</span>
+											<h4>Dr.Dian Violora Nainggolan</h4>
+											<span>Kepala Kantor Regional VI Medan</span>
 										</div>
 									</div>
 								</div>
 								<div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
 									<div class="team-member">
 										<div class="member-img">
-											<img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+											<img src="assets/img/team/team-1.jpg" class="img-fluid" alt="" style="min-height: 445px; max-height:445px; min-width:410px;max-width:410px">
 										</div>
 										<div class="member-info">
 											<div class="social">
@@ -74,8 +74,8 @@
 												<a href=""><i class="bi bi-instagram"></i></a>
 												<a href=""><i class="bi bi-linkedin"></i></a>
 											</div>
-											<h4>Walter White</h4>
-											<span>Chief Executive Officer</span>
+											<h4>Bayu Nugroho</h4>
+											<span>Direktur Pengawasan dan Pengendalian IV</span>
 										</div>
 									</div>
 								</div>
@@ -89,7 +89,7 @@
 								<div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
 									<div class="team-member">
 										<div class="member-img">
-											<img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+											<img src="{{asset('bkn/dian.jpg')}}" class="img-fluid" alt="" style="min-height: 445px; max-height:445px; min-width:410px;max-width:410px">
 										</div>
 										<div class="member-info">
 											<div class="social">
@@ -98,8 +98,8 @@
 												<a href=""><i class="bi bi-instagram"></i></a>
 												<a href=""><i class="bi bi-linkedin"></i></a>
 											</div>
-											<h4>Walter White</h4>
-											<span>Chief Executive Officer</span>
+											<h4>Dr.Dian Violora Nainggolan</h4>
+											<span>Kepala Kantor Regional VI Medan</span>
 										</div>
 									</div>
 								</div>
