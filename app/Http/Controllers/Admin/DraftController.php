@@ -61,7 +61,7 @@ class DraftController extends Controller
 			'category_id'       => $request->category_id,
 			'user_id' 		    => auth()->user()->id,
 			'body' 				=> $request->body,
-			'excerpt' 		    => Str::limit(strip_tags($request->body, '150')),te
+			'excerpt' 		    => Str::limit(strip_tags($request->body, '150')),
 			// 'thumbnail' 	    => 'storage/thumbnail/'. $newName,
 			'status' 			=> $request->status,
 			'is_headline'       => $request->is_headline
