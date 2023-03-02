@@ -6,7 +6,14 @@
                 <br />
 
                 <div class="card mb-4">
-                    <div class="card-header"></div>
+                    <div class="card-header">
+                        <!-- <Link
+                            href="/admin/category/create"
+                            class="btn btn-success"
+                            ><i class="fa fa-angle-left" aria-hidden="true"></i>
+                            Kembali</Link
+                        > -->
+                    </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card-body">
@@ -81,28 +88,6 @@
                                         >
                                             <td>{{ data.id }}</td>
                                             <td>{{ data.title }}</td>
-                                            <td>
-                                                <Link
-                                                    :href="`/admin/category/edit/${data.id}`"
-                                                    class="btn btn-sm btn-warning"
-                                                    ><i
-                                                        class="fa fa-pencil-alt"
-                                                    ></i
-                                                ></Link>
-                                                |
-                                                <button
-                                                    @click.prevent="
-                                                        destroy(data.id)
-                                                    "
-                                                    :href="`/admin/category/delete/${data.id}`"
-                                                    class="btn btn-sm btn-danger"
-                                                >
-                                                    <i
-                                                        class="fa fa-trash"
-                                                        aria-hidden="true"
-                                                    ></i>
-                                                </button>
-                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -131,18 +116,19 @@ export default {
     props: {
         errors: Object,
         category: Object,
+        dataId: Object,
     },
     data() {
         return {
             form: {
-                title: "",
+                title: this.dataId.title,
             },
         };
     },
     methods: {
         submit() {
-            Inertia.post(
-                "/admin/category/create",
+            Inertia.put(
+                `/admin/category/edit/${this.dataId.id}`,
                 {
                     title: this.form.title,
                 },
@@ -150,7 +136,7 @@ export default {
                     onSuccess: () => {
                         Swal.fire({
                             title: "Success!",
-                            text: "Postingan Berhasil Disimpan.",
+                            text: "Postingan Berhasil Diubah.",
                             icon: "success",
                             showConfirmButton: false,
                             timer: 2000,
@@ -158,28 +144,6 @@ export default {
                     },
                 }
             );
-        },
-        destroy(id) {
-            Swal.fire({
-                title: "Apakah Anda yakin?",
-                text: "Anda tidak akan dapat mengembalikan ini!",
-                icon: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#3085d6",
-                cancelButtonColor: "#d33",
-                confirmButtonText: "Yes, delete it!",
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Inertia.delete(`/admin/category/delete/${id}`);
-                    Swal.fire({
-                        title: "Deleted!",
-                        text: "Category Berhasil Dihapus!.",
-                        icon: "success",
-                        timer: 2000,
-                        showConfirmButton: false,
-                    });
-                }
-            });
         },
     },
 };

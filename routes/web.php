@@ -37,7 +37,10 @@ Route::middleware('auth')->group(function(){
         Route::get('/category', [CategoryController::class, 'index'])->name('category');
         Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
         Route::post('/category/create', [CategoryController::class, 'store'])->name('category.store');
-        
+				Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
+				Route::put('/category/edit/{id}', [CategoryController::class, 'update'])->name('category.update');
+				Route::delete('/category/delete/{id}', [CategoryController::class, 'destroy'])->name('category.destroy');
+
         //route hero
         Route::get('/hero', [HeroesController::class, 'index'])->name('hero');
         Route::get('/hero/create', [HeroesController::class, 'create'])->name('hero.create');

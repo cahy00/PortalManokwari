@@ -59,7 +59,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+			//
     }
 
     /**
@@ -70,7 +70,9 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+			$dataId = Category::find($id);
+			$category = Category::orderBy('created_at', 'DESC')->limit(5)->get();
+			return inertia('Admin/Category/Edit', compact('dataId', 'category'));
     }
 
     /**
@@ -82,7 +84,16 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dataId = Category::findOrFail($id);
+				$request->validate([
+					'title' => 'required'
+				]);
+
+				$dataId->update([
+					'title' => $request->title
+				]);
+
+				return redirect()->route('category.create');
     }
 
     /**
@@ -93,6 +104,9 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Category::findOrFail($id);
+				$category->delete();
+
+				return redirect()->route('category.create');
     }
 }
