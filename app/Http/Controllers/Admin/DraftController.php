@@ -37,6 +37,24 @@ class DraftController extends Controller
 	public function update(Request $request, $id)
 	{
 		$draft = Draft::find($id);
+
+		if($request->status == 1){
+			$post = Post::create([
+				'title' 			=> $request->title,
+				'slug'  			=> Str::slug($request->title),
+				'category_id'       => $request->category_id,
+				'user_id' 		    => auth()->user()->id,
+				'body' 				=> $request->body,
+				'excerpt' 		    => Str::limit(strip_tags($request->body, '150')),
+				// 'thumbnail' 	    => 'storage/thumbnail/'. $newName,
+				'status' 			=> $request->status,
+				'is_headline'       => $request->is_headline
+			]);
+			$draft->delete();
+			
+			return redirect()->route('post');
+		}
+		
 		$draft->update([
 			'title' 			=> $request->title,
 			'slug'  			=> Str::slug($request->title),
@@ -52,5 +70,12 @@ class DraftController extends Controller
 	return redirect()->route('draft');
 
 		
+	}
+
+	public function destroy($id)
+	{
+		$draft = Draft::findOrFail($id);
+		$draft->delete();
+		return redirect()->route('draft');
 	}
 }

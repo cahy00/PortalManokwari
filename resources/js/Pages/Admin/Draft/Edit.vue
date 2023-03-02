@@ -184,6 +184,8 @@
                             </button>
 
                             <button
+                                @click.prevent="destroy(draft.id)"
+                                :href="`/admin/draft/delete/${draft.id}`"
                                 class="btn btn-danger btn-md border-0 shadow me-2"
                             >
                                 <i class="fa fa-trash"></i> Hapus
@@ -234,18 +236,18 @@ export default {
             Inertia.put(
                 `/admin/draft/update/${this.draft.id}`,
                 {
-                    title: this.draft.title,
-                    category_id: this.draft.category_id,
-                    body: this.draft.body,
-                    thumbnail: this.draft.thumbnail,
-                    status: this.draft.status,
-                    is_headline: this.draft.is_headline,
+                    title: this.form.title,
+                    category_id: this.form.category_id,
+                    body: this.form.body,
+                    thumbnail: this.form.thumbnail,
+                    status: this.form.status,
+                    is_headline: this.form.is_headline,
                 },
                 {
                     onSuccess: () => {
                         Swal.fire({
                             title: "Success!",
-                            text: "Siswa Berhasil Diubah.",
+                            text: "Draft Berhasil Diubah.",
                             icon: "success",
                             showConfirmButton: false,
                             timer: 2000,
@@ -253,6 +255,28 @@ export default {
                     },
                 }
             );
+        },
+        destroy(id) {
+            Swal.fire({
+                title: "Apakah Anda Yakin?",
+                text: "Anda tidak akan dapat mengembalikan ini!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Inertia.delete(`/admin/draft/delete/${id}`);
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Draft Berhasil Dihapus!.",
+                        icon: "success",
+                        timer: 2000,
+                        showConfirmButton: false,
+                    });
+                }
+            });
         },
     },
 };

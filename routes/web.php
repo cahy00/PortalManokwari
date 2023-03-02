@@ -32,6 +32,8 @@ Route::middleware('auth')->group(function(){
         Route::get('/draft/show/{id}', [DraftController::class, 'show'])->name('draft.show');
         Route::get('/draft/edit/{id}', [DraftController::class, 'edit'])->name('draft.edit');
         Route::put('/draft/update/{id}', [DraftController::class, 'update'])->name('draft.update');
+				Route::delete('/draft/delete/{id}', [DraftController::class, 'destroy'])->name('draft.destroy');
+
 
         //route category
         Route::get('/category', [CategoryController::class, 'index'])->name('category');
