@@ -26,6 +26,8 @@ Route::middleware('auth')->group(function(){
         Route::post('/post/create', [PostController::class, 'store'])->name('post.store');
         Route::get('/post/show/{id}', [PostController::class, 'show'])->name('post.show');
         Route::get('/post/edit/{id}', [PostController::class, 'edit'])->name('post.edit');
+        Route::put('/post/edit/{id}', [PostController::class, 'update'])->name('post.update');
+        Route::delete('/post/delete/{id}', [PostController::class, 'destroy'])->name('post.delete');
         
         //route draft 
         Route::get('/draft', [DraftController::class, 'index'])->name('draft');

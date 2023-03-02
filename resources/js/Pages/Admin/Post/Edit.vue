@@ -188,6 +188,13 @@
                             >
                                 Reset
                             </button>
+                            <button
+                                @click.prevent="destroy(post.id)"
+                                :href="`/admin/post/delete/${post.id}`"
+                                class="btn btn-danger btn-md border-0 shadow me-2"
+                            >
+                                Hapus
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -253,20 +260,28 @@ export default {
                 }
             );
         },
-
-        // previewImage() {
-        //     const image = document.querySelector("#image");
-        //     const imgPreview = document.querySelector(".img-preview");
-
-        //     imgPreview.style.display = "block";
-
-        //     const oFReader = new FileReader();
-        //     oFReader.readAsDataURL(image.files[0]);
-
-        //     oFReader.onload = function (oFREvent) {
-        //         imgPreview.src = oFREvent.target.result;
-        //     };
-        // },
+        destroy(id) {
+            Swal.fire({
+                title: "Apakah Anda Ingin Menghapus Postingan Ini?",
+                text: "Postingan tidak bisa dikembalikan",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Inertia.delete(`/admin/post/delete/${id}`);
+                    Swal.fire({
+                        title: "Deleted",
+                        text: "Postingan Berhasil Dihapus",
+                        icon: "success",
+                        timer: 2000,
+                        showConfirmButton: false,
+                    });
+                }
+            });
+        },
     },
 };
 </script>
