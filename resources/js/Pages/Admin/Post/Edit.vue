@@ -230,15 +230,15 @@ export default {
                 body: this.post.body,
                 thumbnail: this.post.thumbnail,
                 status: this.post.status,
-                is_headline: "",
+                is_headline: this.post.is_headline,
             },
             imageData: null,
         };
     },
     methods: {
         submit() {
-            Inertia.post(
-                "/post/create",
+            Inertia.put(
+                `/admin/post/edit/${this.post.id}`,
                 {
                     title: this.form.title,
                     category_id: this.form.category_id,
@@ -251,7 +251,7 @@ export default {
                     onSuccess: () => {
                         Swal.fire({
                             title: "Success!",
-                            text: "Postingan Berhasil Disimpan.",
+                            text: "Postingan Berhasil Diubah.",
                             icon: "success",
                             showConfirmButton: false,
                             timer: 2000,

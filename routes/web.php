@@ -49,7 +49,10 @@ Route::middleware('auth')->group(function(){
         Route::get('/hero', [HeroesController::class, 'index'])->name('hero');
         Route::get('/hero/create', [HeroesController::class, 'create'])->name('hero.create');
         Route::post('/hero/create', [HeroesController::class, 'store'])->name('hero.store');
-        
+
+				//route unit
+        Route::get('/unit', [HeroesController::class, 'index'])->name('unit');
+
     });
     
 });

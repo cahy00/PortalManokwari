@@ -56,7 +56,7 @@
                         Kategori
                     </Link>
                     <Link
-                        href="/admin/lesson"
+                        href="#"
                         :class="{
                             active: $page.url.startsWith('/admin/lesson'),
                         }"
@@ -91,6 +91,18 @@
                             <i class="fas fa-university"></i>
                         </div>
                         Unit Kerja
+                    </Link>
+                    <Link
+                        href="/admin/departement"
+                        :class="{
+                            active: $page.url.startsWith('/admin/departement'),
+                        }"
+                        class="nav-link"
+                    >
+                        <div class="sb-nav-link-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        Jabatan
                     </Link>
                     <div class="sb-sidenav-menu-heading">Interface</div>
                     <Link

@@ -142,7 +142,7 @@
 		<div class="row">
 
 			@foreach ($post as $item)
-				@if ($item->is_headline == false)
+				{{-- @if ($item->is_headline == false) --}}
 					<div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
 						<div class="post-box">
 							<div class="post-img">
@@ -157,9 +157,8 @@
 							<a href="/blog-detail/show/{{$hash->encodeHex($item->id)}}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 						</div>
 					</div>
-				@endif
+				{{-- @endif --}}
 			@endforeach
-
 		</div>
 
 	</div>

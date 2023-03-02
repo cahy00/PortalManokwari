@@ -23,7 +23,7 @@ class PostController extends Controller
      */
     public function index()
     {		
-        $post = Post::with(['user', 'category'])->get();
+        $post = Post::with(['user', 'category'])->orderBy('created_at', 'DESC')->get();
         // $resource = PostResource::collection($post);
         // $post = DataTables::of(Post::query())->make()->toJson();
         return inertia('Admin/Post/Index', compact('post'));
@@ -36,8 +36,8 @@ class PostController extends Controller
      */
     public function create()
     {
-		$category = Category::all();
-		$user = User::all();
+				$category = Category::all();
+				$user 		= User::all();
         return inertia('Admin/Post/Create', compact('user', 'category'));
     }
 
@@ -53,55 +53,56 @@ class PostController extends Controller
         $request->validate([
         'title' 			=> 'required|string|max:50',
         'body' 				=> 'required',
-        'category_id'       => 'required',
-        'thumbnail' 	    => 'required|mimes:jpg,jpeg,png',
+        'category_id' => 'required',
+        'thumbnail' 	=> 'required|mimes:jpg,jpeg,png',
 
         ]);
 
         if($request->status == 1){
-            if($request->file('thumbnail')->isValid())
-            {
+
+            // if($request->file('thumbnail')->isValid())
+            // {
                 $file 			    = $request->file('thumbnail');
                 $name 			    = date('YmdHis');
-                $extension 	        = $file->getClientOriginalExtension();
+                $extension 	    = $file->getClientOriginalExtension();
                 $newName 		    = $name . "." . $extension;
-                $uploads   	        = Storage::putFileAs('public/thumbnail', $request->file('thumbnail'), $newName);
-            }
+                $uploads   	    = Storage::putFileAs('public/thumbnail', $request->file('thumbnail'), $newName);
+            // }
 
             $post = Post::create([
                 'title' 			=> $request->title,
                 'slug'  			=> Str::slug($request->title),
-                'category_id'       => $request->category_id,
-                'user_id' 		    => auth()->user()->id,
+                'category_id' => $request->category_id,
+                'user_id' 		=> auth()->user()->id,
                 'body' 				=> $request->body,
-                'excerpt' 		    => Str::limit(strip_tags($request->body, '150')),
-                'thumbnail' 	    => 'storage/thumbnail/'. $newName,
+                'excerpt' 		=> Str::limit(strip_tags($request->body, '150')),
+                'thumbnail' 	=> 'storage/thumbnail/'. $newName,
                 'status' 			=> $request->status,
-                'is_headline'       => $request->is_headline
+                'is_headline' => $request->is_headline
             ]);
 
         return redirect()->route('post');
 
         }else{
-            if($request->file('thumbnail')->isValid())
-            {
+            // if($request->file('thumbnail')->isValid())
+            // {
                 $file 				= $request->file('thumbnail');
                 $name 				= date('YmdHis');
-                $extension 		    = $file->getClientOriginalExtension();
+                $extension 		= $file->getClientOriginalExtension();
                 $newName 			= $name . "." . $extension;
-                $uploads   		    = Storage::putFileAs('public/thumbnail', $request->file('thumbnail'), $newName);
-            }
+                $uploads   		= Storage::putFileAs('public/thumbnail', $request->file('thumbnail'), $newName);
+            // }
 
             $draft = Draft::create([
                 'title' 			=> $request->title,
                 'slug'  			=> Str::slug($request->title),
-                'category_id'       => $request->category_id,
-                'user_id' 		    => auth()->user()->id,
+                'category_id' => $request->category_id,
+                'user_id' 		=> auth()->user()->id,
                 'body' 				=> $request->body,
-                'excerpt' 		    => Str::limit(strip_tags($request->body, '150')),
-                'thumbnail' 	    => 'storage/thumbnail/'. $newName,
+                'excerpt' 		=> Str::limit(strip_tags($request->body, '150')),
+                'thumbnail' 	=> 'storage/thumbnail/'. $newName,
                 'status' 			=> $request->status,
-                'is_headline'       => $request->is_headline
+                'is_headline' => $request->is_headline
 
             ]);
 
@@ -120,7 +121,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $post = Post::findOrFail($id);
+        $post 		= Post::findOrFail($id);
         $category = Category::all();
         return inertia('Admin/Post/Show', compact('post', 'category'));
     }
@@ -133,7 +134,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        $post = Post::find($id);
+        $post 		= Post::find($id);
         $category = Category::all();
         return inertia('Admin/Post/Edit', compact('post', 'category'));
     }
@@ -147,7 +148,28 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::findOrFail($id);
+				if($request->hasFile('thumbnail')){
+					Storage::disk('local')->delete($request->thumbnail);
+					$file 				= $request->file('thumbnail');
+					$name 				= date('YmdHis');
+					$extension 		= $file->getClientOriginalExtension();
+					$newName 			= $name . "." . $extension;
+					$uploads   		= Storage::putFileAs('public/thumbnail', $request->file('thumbnail'), $newName);
+				$post->update([
+					'title' 			=> $request->title,
+					'slug'  			=> Str::slug($request->title),
+					'category_id' => $request->category_id,
+					'user_id' 		=> auth()->user()->id,
+					'body' 				=> $request->body,
+					'excerpt' 		=> Str::limit(strip_tags($request->body, '150')),
+					'thumbnail' 	=> 'storage/thumbnail/'. $newName,
+					'status' 			=> $request->status,
+					'is_headline' => $request->is_headline
+				]);
+			}
+				
+				return redirect()->route('post');
     }
 
     /**
@@ -159,6 +181,7 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = Post::findOrFail($id);
+				Storage::disk('local')->delete($post->thumbnail);
 				$post->delete();
 
 				return redirect()->route('post');

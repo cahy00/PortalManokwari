@@ -1,15 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Category;
-use App\Models\Hero;
 use Illuminate\Http\Request;
-use App\Models\Post;
-use Hashids\Hashids;
 
-class LandingController extends Controller
+class EmployeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,38 +14,7 @@ class LandingController extends Controller
      */
     public function index()
     {
-        $hash = new Hashids();
-        $post = Post::with(['category', 'user'])
-        ->where([
-            ['category_id', 1],
-            // ['is_headline', 0]
-        ])
-        // ->where('is_headline', 0)
-        // ->where('category_id', 1)
-        ->orderBy('created_at', 'DESC')
-        ->limit(3)
-        ->get();
-
-        $artikel = Post::with(['category', 'user'])
-        ->where('category_id', '>', 1)
-				->orderBy('created_at', 'DESC')
-        ->limit(6)
-        ->get();
-
-        $headline = Post::with(['category', 'user'])
-        ->where('is_headline', 1)
-        ->limit(1)
-        ->get();
-
-        $hero = Hero::all();
-        return view('/user/landing/index', compact('post', 'artikel', 'hero', 'headline', 'hash'));
-
-    }
-
-    public function galeri()
-    {
-        $post = Post::with(['category', 'user'])->get();
-        return view('/user/landing/galeri', compact('post'));
+        //
     }
 
     /**
@@ -81,11 +46,7 @@ class LandingController extends Controller
      */
     public function show($id)
     {
-        $hash = new Hashids();
-        $post = Post::findOrFail($hash->decodeHex($id));
-        $allpost = Post::all();
-        $allcategory = Category::all();
-        return view('user.landing.blog_detail', compact('post', 'allpost', 'allcategory', 'hash'));
+        //
     }
 
     /**
