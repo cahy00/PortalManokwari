@@ -79,22 +79,22 @@
 			<div class="tab-pane" id="tab-2">
 				<div class="row gy-4">
 					<div class="col-lg-8 order-2 order-lg-1">
-						<h3>Undaesenti</h3>
+						<h3>Bagian Tata Usaha</h3>
 						<p>
-							Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-							culpa qui officia deserunt mollit anim id est laborum
+							Bagian Tata Usaha mempunyai tugas melaksanakan teknis dan administrasi bagi seluruh satuan organisasi Kanreg BKN
 						</p>
 						<p class="fst-italic">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-							magna aliqua.
+							Bagian Tata Usaha menyelenggarakan fungsi 
 						</p>
 						<ul>
-							<li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-							<li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-							<li><i class="bi bi-check-circle-fill"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
-							<li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+							<li><i class="bi bi-check-circle-fill"></i> Penyusunan rencana dan program</li>
+							<li><i class="bi bi-check-circle-fill"></i> Pengelolaan administrasi keuangan.</li>
+							<li><i class="bi bi-check-circle-fill"></i> Pengelolaan administrasi kepegawaian dan reformasi birokrasi internal.</li>
+							<li><i class="bi bi-check-circle-fill"></i> Pelaksanaan ketatausahaan</li>
+							<li><i class="bi bi-check-circle-fill"></i> Pengelolaan barang milik negara dan rumah tangga, dan</li>
+							<li><i class="bi bi-check-circle-fill"></i> Pelaksanaan dokumentasi dan hubungan masyarakat</li>
 						</ul>
+						<p>Bagian Tata Usaha terdiri atas beberapa sub bagian diantaranya adalah Subbagian Perencanaan dan Keuangan, Subbagian Kepegawaian dan Pengelolaan Kinerja, dan Subbagian Umum</p>
 					</div>
 					<div class="col-lg-4 order-1 order-lg-2 text-center">
 						<img src="assets/img/features-2.svg" alt="" class="img-fluid">
@@ -105,20 +105,18 @@
 			<div class="tab-pane" id="tab-3">
 				<div class="row gy-4">
 					<div class="col-lg-8 order-2 order-lg-1">
-						<h3>Pariatur</h3>
+						<h3>Bidang Mutasi dan Status Kepegawaian</h3>
 						<p>
-							Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-							culpa qui officia deserunt mollit anim id est laborum
+							Bidang Mutasi dan Status Kepegawaian mempunyai tugas melaksanakan pemberian teknis kenaikan pangkat dan mutasi lainnya, pertimbangan teknis mutasi antar kabupaten/kota dalam provinsi, pemberian pertimbangan teknis mutasi dari instansi pusat ke instansi daerah dll.
 						</p>
+						<p>Adapun fungsi dari Bidang Mutasi dan Status Kepegawaian adalah</p>
 						<ul>
-							<li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-							<li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-							<li><i class="bi bi-check-circle-fill"></i> Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</li>
+							<li><i class="bi bi-check-circle-fill"></i> pemberian pertimbangan teknis mutasi Pegawai Negeri Sipil dari kabupaten/kota ke provinsi di wilayah kerjanya.</li>
+							<li><i class="bi bi-check-circle-fill"></i> pemberian persetujuan peninjauan masa kerja</li>
+							<li><i class="bi bi-check-circle-fill"></i> penetapan keputusan mutasi Pegawai Negeri Sipil dari Instansi Pusat ke instansi Daerah Provinsi/Kabupaten/Kota di wilayah kerjanya.</li>
 						</ul>
 						<p class="fst-italic">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-							magna aliqua.
+							Bidang Mutasi dan Status Kepegawaian terdiri atas kelompok Jabatan Fungsional
 						</p>
 					</div>
 					<div class="col-lg-4 order-1 order-lg-2 text-center">
@@ -130,20 +128,17 @@
 			<div class="tab-pane" id="tab-4">
 				<div class="row gy-4">
 					<div class="col-lg-8 order-2 order-lg-1">
-						<h3>Nostrum</h3>
+						<h3>Bidang Pengangkatan dan Pensiun</h3>
 						<p>
-							Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-							culpa qui officia deserunt mollit anim id est laborum
+							Bidang Pengangkatan dan Pensiun mempunyai tugas melaksanakan penyiapan penetapan Nomor Induk Pegawai Pegawai Negeri Sipil, penetapan pertimbangan teknis kenaikan pangkat pengabdian dan/atau pemberian pensiun, pemberian pertimbangan teknis pensiun bagi Pegawai Negeri Sipil serta melaksanakan pengembangan dan pengelolaan tata naskah pensiun di wilayah kerjanya.
 						</p>
 						<p class="fst-italic">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-							magna aliqua.
+							Bidang Pengangkatan dan Pensiun Menyelenggarakan fungsi 
 						</p>
 						<ul>
-							<li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-							<li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-							<li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+							<li><i class="bi bi-check-circle-fill"></i> penyiapan penetapan Nomor Induk Pegawai untuk Calon Pegawai Negeri Sipil/Pegawai Negeri Sipil Instansi Daerah di wilayah kerjanya.</li>
+							<li><i class="bi bi-check-circle-fill"></i> penyiapan penetapan pemberian pertimbangan teknis kenaikan pangkat pengabdian dan pemberian pensiun Pegawai Negeri Sipil pada instansi pusat yang menjadi kewenangannya.</li>
+							<li><i class="bi bi-check-circle-fill"></i> penyiapan penetapan pemberian pertimbangan teknis kenaikan pangkat pengabdian dan/atau pemberian pensiun Pegawai Negeri Sipil pada instansi daerah di wilayah kerjanya.</li>
 						</ul>
 					</div>
 					<div class="col-lg-4 order-1 order-lg-2 text-center">
@@ -155,20 +150,17 @@
 			<div class="tab-pane" id="tab-5">
 				<div class="row gy-4">
 					<div class="col-lg-8 order-2 order-lg-1">
-						<h3>Adipiscing</h3>
+						<h3>Bidang Informasi Kepegawaian</h3>
 						<p>
-							Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-							culpa qui officia deserunt mollit anim id est laborum
+							Bidang Informasi Kepegawaian mempunyai tugas melaksanakan dan memfasilitasi pengembangan sistem informasi kepegawaian dan pengelolaan arsip kepegawaian Aparatur Sipil Negara pada instansi di wilayah kerjanya.
 						</p>
 						<p class="fst-italic">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-							magna aliqua.
+							Bidang Informasi Kepegawaian menyelenggarakan fungsi
 						</p>
 						<ul>
-							<li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-							<li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-							<li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+							<li><i class="bi bi-check-circle-fill"></i> pengelolaan dan pemeliharaan jaringan dan basis data kepegawaian Aparatur Sipil Negara.</li>
+							<li><i class="bi bi-check-circle-fill"></i> pengelolaan dan pemeliharaan basis data penilaian kinerja pegawai Aparatur Sipil Negara.</li>
+							<li><i class="bi bi-check-circle-fill"></i> pengelolaan dan pemeliharaan aplikasi sistem layanan kepegawaian pegawai Aparatur Sipil Negara.</li>
 						</ul>
 					</div>
 					<div class="col-lg-4 order-1 order-lg-2 text-center">
@@ -180,21 +172,19 @@
 			<div class="tab-pane" id="tab-6">
 				<div class="row gy-4">
 					<div class="col-lg-8 order-2 order-lg-1">
-						<h3>Kantor Regional XIV</h3>
+						<h3>Bidang Pengembangan dan Supervisi Kepegawaian</h3>
 						<p>
-							Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-							culpa qui officia deserunt mollit anim id est laborum
+							Bidang Pengembangan dan Supervisi Kepegawaian mempunyai tugas melaksanakan pengembangan kepegawaian dan supervisi pelaksanaan Manajemen Aparatur Sipil Negara instansi di wilayah kerjanya.
 						</p>
 						<p class="fst-italic">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-							magna aliqua.
+							Dalam melaksanakan tugasnya, Bidang Pengembangan dan Supervisi Kepegawaian
 						</p>
 						<ul>
-							<li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-							<li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-							<li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+							<li><i class="bi bi-check-circle-fill"></i> Pemberian bimbingan dan petunjuk teknis pelaksanaan Manajemen Aparatur Sipil Negara.</li>
+							<li><i class="bi bi-check-circle-fill"></i> Penyiapan pengembangan dan pengawasan standar kompetensi jabatan, serta pengendalian pemanfaatan lulusan pendidikan dan pelatihan Pegawai Aparatur Sipil Negara di wilayah kerjanya.</li>
+							<li><i class="bi bi-check-circle-fill"></i> Penyiapan bahan dan pengawasan dan pengendalian NSPK Manajemen Aparatur Sipil Negara di wilayah kerjanya.</li>
 						</ul>
+						<p>Bidang Pengembangan dan Supervisi Kepegawaian terdiri atas Kelompok Jabatan Fungsional.</p>
 					</div>
 					<div class="col-lg-4 order-1 order-lg-2 text-center">
 						<img src="assets/img/features-6.svg" alt="" class="img-fluid">

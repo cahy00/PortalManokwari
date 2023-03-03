@@ -7,7 +7,7 @@
 		<div class="carousel-inner" role="listbox">
 
 			<!-- Slide 1 -->
-			<div class="carousel-item active" style="background-image: url(bkn/ba.png);" class="img-fluid">
+			<div class="carousel-item active" style="background-image: url(bkn/banner.png);" class="img-fluid">
 				<div class="carousel-container">
 					
 				</div>
@@ -19,7 +19,7 @@
 			</div>
 			@endforeach
 			<!-- Slide 3 -->
-			<div class="carousel-item" style="background-image: url(bkn/MOTTO.jpg);" class="img-fluid">
+			{{-- <div class="carousel-item" style="background-image: url(bkn/MOTTO.jpg);" class="img-fluid"> --}}
 				{{-- <div class="carousel-container">
 					<div class="carousel-content">
 						<h2>Welcome to <span>Company</span></h2>
@@ -27,7 +27,7 @@
 						<div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
 					</div>
 				</div> --}}
-			</div>
+			{{-- </div> --}}
 
 		</div>
 

@@ -40,17 +40,17 @@ class DatabaseSeeder extends Seeder
 					'slug' => 'berita-kepegawaian'
 				]);
 
-				Post::create([
-					'title' => 'Ini COntoh Post Pertama di table',
-					'category_id' => 1,
-					'user_id' => 1,
-					'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, voluptates tempore quasi dolores culpa unde nesciunt velit itaque fuga magni incidunt tenetur, nisi quis perspiciatis obcaecati atque nihil. Aliquid vero, aliquam dignissimos incidunt praesentium distinctio quaerat aspernatur non sint eveniet?',
-					'slug' => 'ini-contoh',
-					'excerpt' => 'quasi dolores culpa unde nesciunt velit itaque fuga magni incidunt tenetur, nisi quis perspiciatis obcaecati atque nihil',
-					'thumbnail' => 'test.jpg',
-					'status' => 1,
-					'is_headline' => false
-				]);
+				// Post::create([
+				// 	'title' => 'Ini COntoh Post Pertama di table',
+				// 	'category_id' => 1,
+				// 	'user_id' => 1,
+				// 	'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, voluptates tempore quasi dolores culpa unde nesciunt velit itaque fuga magni incidunt tenetur, nisi quis perspiciatis obcaecati atque nihil. Aliquid vero, aliquam dignissimos incidunt praesentium distinctio quaerat aspernatur non sint eveniet?',
+				// 	'slug' => 'ini-contoh',
+				// 	'excerpt' => 'quasi dolores culpa unde nesciunt velit itaque fuga magni incidunt tenetur, nisi quis perspiciatis obcaecati atque nihil',
+				// 	'thumbnail' => 'test.jpg',
+				// 	'status' => 1,
+				// 	'is_headline' => false
+				// ]);
 
 				Unit::create([
 					'name' => 'Bidang Informasi Kepegawaian'
@@ -65,13 +65,13 @@ class DatabaseSeeder extends Seeder
 					'name'	=> 'Analis Sumber Daya Manusia'
 				]);
 
-				Employe::create([
-					'unit_id' => 1,
-					'departement_id' => 1,
-					'name' => 'Stacy Vidy Mamentu',
-					'nip' => '199609102022031002',
-					'jk' => 'P',
-					'photo' => 'photo.jpeg'
-				]);
+				// Employe::create([
+				// 	'unit_id' => 1,
+				// 	'departement_id' => 1,
+				// 	'name' => 'Stacy Vidy Mamentu',
+				// 	'nip' => '199609102022031002',
+				// 	'jk' => 'P',
+				// 	'photo' => 'photo.jpeg'
+				// ]);
     }
 }

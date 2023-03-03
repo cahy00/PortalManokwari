@@ -51,7 +51,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-        'title' 			=> 'required|string|max:50',
+        'title' 			=> 'required|string|max:70',
         'body' 				=> 'required',
         'category_id' => 'required',
         'thumbnail' 	=> 'required|mimes:jpg,jpeg,png',
@@ -75,7 +75,7 @@ class PostController extends Controller
                 'category_id' => $request->category_id,
                 'user_id' 		=> auth()->user()->id,
                 'body' 				=> $request->body,
-                'excerpt' 		=> Str::limit(strip_tags($request->body, '150')),
+                'excerpt' 		=> Str::limit(strip_tags($request->body, '100')),
                 'thumbnail' 	=> 'storage/thumbnail/'. $newName,
                 'status' 			=> $request->status,
                 'is_headline' => $request->is_headline
