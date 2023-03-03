@@ -232,7 +232,6 @@ export default {
                 status: this.post.status,
                 is_headline: this.post.is_headline,
             },
-            imageData: null,
         };
     },
     methods: {

@@ -148,7 +148,14 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $post = Post::findOrFail($id);
+				$post = Post::findOrFail($id);
+				$request->validate([
+					'title' 			=> 'required|string|max:50',
+					'body' 				=> 'required',
+					'category_id' => 'required',
+					'thumbnail' 	=> 'required|mimes:jpg,jpeg,png',
+				]);
+
 				if($request->hasFile('thumbnail')){
 					Storage::disk('local')->delete($request->thumbnail);
 					$file 				= $request->file('thumbnail');
@@ -156,6 +163,7 @@ class PostController extends Controller
 					$extension 		= $file->getClientOriginalExtension();
 					$newName 			= $name . "." . $extension;
 					$uploads   		= Storage::putFileAs('public/thumbnail', $request->file('thumbnail'), $newName);
+				}
 				$post->update([
 					'title' 			=> $request->title,
 					'slug'  			=> Str::slug($request->title),
@@ -163,11 +171,10 @@ class PostController extends Controller
 					'user_id' 		=> auth()->user()->id,
 					'body' 				=> $request->body,
 					'excerpt' 		=> Str::limit(strip_tags($request->body, '150')),
-					'thumbnail' 	=> 'storage/thumbnail/'. $newName,
+					// 'thumbnail' 	=> 'storage/thumbnail/'. $newName,
 					'status' 			=> $request->status,
 					'is_headline' => $request->is_headline
 				]);
-			}
 				
 				return redirect()->route('post');
     }
