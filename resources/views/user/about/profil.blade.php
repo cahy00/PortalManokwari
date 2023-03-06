@@ -57,8 +57,8 @@
 												<a href=""><i class="bi bi-instagram"></i></a>
 												<a href=""><i class="bi bi-linkedin"></i></a>
 											</div>
-											<h4>Dr.Dian Violora Nainggolan</h4>
-											<span>Kepala Kantor Regional VI Medan</span>
+											<h4>Matan Yosafat Refasi</h4>
+											<span>Kepala Bidang Informasi Kepegawaian</span>
 										</div>
 									</div>
 								</div>

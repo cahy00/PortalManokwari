@@ -16,8 +16,8 @@ class HeroesController extends Controller
      */
     public function index()
     {
-        // $hero = Hero::all();
-				return inertia('Admin/Hero/Index');
+        $hero = Hero::all();
+        return inertia('Admin/Hero/Index', compact('hero'));
     }
 
     /**

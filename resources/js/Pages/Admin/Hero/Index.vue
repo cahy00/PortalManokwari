@@ -30,9 +30,9 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr v-for="item in hero" :key="item.id">
                                     <td>1</td>
-                                    <td>2</td>
+                                    <td>{{item.name}}</td>
                                     <td>3</td>
                                     <td>4</td>
                                 </tr>
@@ -57,5 +57,8 @@ export default {
         Head,
         Link,
     },
+    props:{
+        hero:Object
+    }
 };
 </script>
