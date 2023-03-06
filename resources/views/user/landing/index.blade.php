@@ -74,7 +74,7 @@
 					<img src="{{$headline->thumbnail}}" alt="" class="img-fluid" style="min-height: 320px; max-height:320px; min-width:340px;max-width:340px">
 				</div>
 			</div>
-jhgh
+jhghhj
 			@endforeach
 		</div>
 
