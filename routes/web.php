@@ -66,6 +66,8 @@ Route::get('/blog-detail/show/{id}', [LandingController::class, 'show'])->name('
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/profil', [AboutController::class, 'profil'])->name('profil');
 Route::get('/galeri', [LandingController::class, 'galeri'])->name('galeri');
+Route::get('/faq', [FaqController::class, 'faq'])->name('faq');
+
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/register', [RegisterController::class, 'index']);

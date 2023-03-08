@@ -40,6 +40,7 @@
 						<li><a href="/#contact">Kontak</a></li>
 					</ul>
 				</li>
+				<li><a class="nav-link scrollto" href="/faq">FAQ</a></li>
 			</ul>
 			<i class="bi bi-list mobile-nav-toggle d-none"></i>
 		</nav><!-- .navbar -->
