@@ -8,9 +8,7 @@
 
 			<!-- Slide 1 -->
 			<div class="carousel-item active" style="background-image: url(bkn/banner.png);" class="img-fluid">
-				<div class="carousel-container">
-					
-				</div>
+				{{-- <div class="carousel-container"></div> --}}
 			</div>
 
 			@foreach ($hero as $hero)
@@ -71,7 +69,7 @@
 
 			<div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
 				<div class="img">
-					<img src="{{$headline->thumbnail}}" alt="" class="img-fluid" style="min-height: 320px; max-height:320px; min-width:340px;max-width:340px">
+					<img src="{{$headline->thumbnail}}" alt="" class="img-fluid" style="min-height: 320px; max-height:320px; min-width:120%;max-width:120%">
 				</div>
 			</div>
 
