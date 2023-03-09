@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\User\AboutController;
 use App\Http\Controllers\User\LandingController;
+use App\Http\Controllers\User\UserFaqController;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use Yajra\DataTables\DataTables as DataTablesDataTables;
@@ -66,7 +67,7 @@ Route::get('/blog-detail/show/{id}', [LandingController::class, 'show'])->name('
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/profil', [AboutController::class, 'profil'])->name('profil');
 Route::get('/galeri', [LandingController::class, 'galeri'])->name('galeri');
-Route::get('/faq', [FaqController::class, 'faq'])->name('faq');
+Route::get('/faq', [UserFaqController::class, 'index'])->name('faq');
 
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');

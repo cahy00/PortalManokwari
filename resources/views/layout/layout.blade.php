@@ -8,6 +8,8 @@
   <title>Portal BKN Kanreg XIV</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	@yield('head')
 
   <!-- Favicons -->
   <link href="{{asset("bkn/icon-garuda.ico")}}" rel="icon">

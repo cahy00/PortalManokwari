@@ -1,5 +1,12 @@
 @extends('layout.layout')
 
+@section('head')
+	<meta
+  http-equiv="Content-Security-Policy"
+  content="upgrade-insecure-requests" />
+		
+@endsection
+
 <div class="breadcrumbs">
 	<div class="container">
 		<br>

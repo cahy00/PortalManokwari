@@ -28,4 +28,5 @@
 		</div>
 	</div>
 
-</footer><!-- End Footer -->
+</footer>
+<!-- End Footer -->
