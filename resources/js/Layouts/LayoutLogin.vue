@@ -3,7 +3,8 @@
         class="main bg-primary"
         style="
             background-image: url('../../../bkn/bknbaru.jpg');
-            display: block;
+            background-size: cover;
+            position: relative;
         "
     >
         <div id="layoutAuthentication">

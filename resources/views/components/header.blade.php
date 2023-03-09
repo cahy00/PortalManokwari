@@ -29,7 +29,7 @@
 					<ul>
 						<li><a href="https://www.dashboard.bkn14.site">Dashboard Kepegawaian</a></li>
 						<li><a href="https://bit.ly/KOPACE">Kopace</a></li>
-						<li><a href="#">e-Kasus</a></li>
+						{{-- <li><a href="#">e-Kasus</a></li> --}}
 						<li><a href="#">V-Office</a></li>
 					</ul>
 				</li>

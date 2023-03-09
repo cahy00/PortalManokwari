@@ -84,7 +84,7 @@ class LandingController extends Controller
     {
         $hash = new Hashids();
         $post = Post::findOrFail($hash->decodeHex($id));
-        $allpost = Post::all();
+        $allpost = Post::with(['category'])->orderBy('created_at', 'DESC')->where('category_id', 1)->limit(5)->get();
         $allcategory = Category::all();
         return view('user.landing.blog_detail', compact('post', 'allpost', 'allcategory', 'hash'));
     }
