@@ -20,7 +20,7 @@
 				</li>
 				<li class="dropdown"><a href="#"><span>Publikasi</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
 					<ul>
-						<li><a href="/#recent_blog_posts" class="nav-link scrollto">Berita Kepegawaian</a></li>
+						<li><a href="/blog" class="nav-link scrollto">Berita Kepegawaian</a></li>
 						<li><a href="/annaunce" class="nav-link scrollto">Pengumuman</a></li>
 						<li><a class="nav-link scrollto" href="/galeri">Galeri</a></li>
 					</ul>
