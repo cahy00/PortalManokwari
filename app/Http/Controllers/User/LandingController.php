@@ -38,6 +38,7 @@ class LandingController extends Controller
 
         $headline = Post::with(['category', 'user'])
         ->where('is_headline', 1)
+				->orderBy('created_at', 'DESC')
         ->limit(1)
         ->get();
 

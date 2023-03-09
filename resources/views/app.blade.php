@@ -8,7 +8,7 @@
         <meta name="description" content="" />
 		<meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="author" content="" />
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	{{-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> --}}
 
 
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
