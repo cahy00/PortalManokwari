@@ -1,11 +1,11 @@
 @extends('layout.layout')
 
-@section('head')
+{{-- @section('head')
 	<meta
   http-equiv="Content-Security-Policy"
   content="upgrade-insecure-requests" />
 		
-@endsection
+@endsection --}}
 
 <div class="breadcrumbs">
 	<div class="container">
@@ -19,7 +19,7 @@
 		</div>
 
 	</div>
-</div><!-- End Breadcrumbs -->
+</div>
 @section('content-blog')
 		
     <!-- ======= Breadcrumbs ======= -->
