@@ -62,20 +62,18 @@
 
 						</article>
 					</div>
+
 					@endforeach
-					
 					<!-- End post list item -->
 
-				</div><!-- End blog posts list -->
+				</div>
 
-				<div class="blog-pagination">
-					<ul class="justify-content-center">
-						<li><a href="#">1</a></li>
-						<li class="active"><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-					</ul>
-				</div><!-- End blog pagination -->
-
+					<div class="blog-pagination">
+						<ul class="justify-content-center">
+							<li><a href="#">1</a></li>
+						</ul>
+					</div>
+					
 			</div>
 
 			<div class="col-lg-4">
@@ -112,7 +110,7 @@
 								<img src="{{$articel->thumbnail}}" alt="" class="flex-shrink-0">
 								<div>
 									<h4><a href="blog-post.html">{{$articel->title}}</a></h4>
-									<time datetime="2020-01-01">Jan 1, 2020</time>
+									<time datetime="2020-01-01">{{$articel->created_at->format('F d, Y')}}</time>
 								</div>
 							</div><!-- End recent post item-->
 							
@@ -124,17 +122,14 @@
 					<div class="sidebar-item tags">
 						<h3 class="sidebar-title">Tags</h3>
 						<ul class="mt-3">
-							<li><a href="#">App</a></li>
-							<li><a href="#">IT</a></li>
-							<li><a href="#">Business</a></li>
-							<li><a href="#">Mac</a></li>
-							<li><a href="#">Design</a></li>
-							<li><a href="#">Office</a></li>
-							<li><a href="#">Creative</a></li>
-							<li><a href="#">Studio</a></li>
-							<li><a href="#">Smart</a></li>
-							<li><a href="#">Tips</a></li>
-							<li><a href="#">Marketing</a></li>
+							<li><a href="#">ASNkinibeda</a></li>
+							<li><a href="#">ASNPelayanPublik</a></li>
+							<li><a href="#">PPPK2023</a></li>
+							<li><a href="#">AgenPerubahan</a></li>
+							<li><a href="#">Sekdin2022</a></li>
+							<li><a href="#">ReformasiBKN</a></li>
+							<li><a href="#">SatuDataASN</a></li>
+							<li><a href="#">ASNBelajarMandiri</a></li>
 						</ul>
 					</div><!-- End sidebar tags-->
 

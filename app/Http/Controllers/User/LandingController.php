@@ -126,10 +126,15 @@ class LandingController extends Controller
 		public function allblog()
 		{
 			$hash = new Hashids();
-			$allpost = Post::with(['category'])->orderBy('created_at', 'DESC')->where('category_id', 1)->limit(5)->get();
+			$allpost = Post::with(['category'])->orderBy('created_at', 'DESC')->where('category_id', 1)->limit(5)->paginate(10);
 			$count_category = Post::where('category_id', 1)->count();
 			$category = Category::all();
 			$articel = Post::with(['category'])->orderBy('created_at', 'DESC')->where('category_id', '>=', 2)->limit(5)->get();
 			return view('user.blog.index', compact('allpost', 'hash', 'articel', 'category'));
+		}
+
+		public function paginate($items, $perPage = 4, $page = null)
+		{
+			
 		}
 }
