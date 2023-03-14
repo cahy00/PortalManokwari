@@ -183,7 +183,7 @@
 				<p>
 					Anda dapat memberikan survei pelayanan kami melalui formulir dengan klik tombol di bawah ini
 				</p>
-					<a href="#" class="read-more align-self-start"><span>Isi Formulir Survey</span><i class="bi bi-arrow-right"></i></a>
+					<a href="https://bit.ly/SKM-BID-INKA-BKN-14" class="read-more align-self-start"><span>Isi Formulir Survey</span><i class="bi bi-arrow-right"></i></a>
 				</div>
 			</div>
 		</div>
