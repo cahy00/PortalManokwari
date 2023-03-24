@@ -1,11 +1,5 @@
 @extends('layout.layout')
 
-{{-- @section('head')
-	<meta
-  http-equiv="Content-Security-Policy"
-  content="upgrade-insecure-requests" />
-		
-@endsection --}}
 
 <div class="breadcrumbs">
 	<div class="container">
@@ -66,7 +60,7 @@
 				</article><!-- End blog post -->
 
 				<div class="post-author d-flex align-items-center">
-					<img src="{{asset('assets/img/blog/blog-author.jpg')}}" class="rounded-circle flex-shrink-0" alt="">
+					<img src="{{asset('assets/img/blog/blog-author.j	pg')}}" class="rounded-circle flex-shrink-0" alt="">
 					<div>
 						<h4>Bidang Umum dan Humas Kanreg XIV</h4>
 						<div class="social-links">
@@ -110,8 +104,6 @@
 
 					</div>
 				</div>
-
-
 			</div>
 
 			<div class="col-lg-4">

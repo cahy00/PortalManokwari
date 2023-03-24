@@ -30,7 +30,7 @@
 						<li><a href="https://www.dashboard.bkn14.site">Dashboard Kepegawaian</a></li>
 						<li><a href="https://bit.ly/KOPACE">Kopace</a></li>
 						{{-- <li><a href="#">e-Kasus</a></li> --}}
-						<li><a href="#">V-Office</a></li>
+						<li><a href="https://ikm.bkn14.site/">Mahkota</a></li>
 					</ul>
 				</li>
 				<li class="dropdown"><a href="#"><span>Hubungi Kami</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
