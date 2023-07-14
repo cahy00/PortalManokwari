@@ -70,10 +70,17 @@ Route::get('/galeri', [LandingController::class, 'galeri'])->name('galeri');
 Route::get('/blog', [LandingController::class, 'allblog'])->name('allblog');
 Route::get('/faq', [UserFaqController::class, 'index'])->name('faq');
 
+Route::get('/index1', function(){
+	return view('index1.index1');
+});
+
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/logout', [LogoutController::class, 'index'])->name('logout');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+
+Route::get('/test', [LandingController::class, 'index']);
+
 

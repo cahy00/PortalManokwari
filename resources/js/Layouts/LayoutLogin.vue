@@ -1,12 +1,5 @@
 <template>
-    <div
-        class="main bg-primary"
-        style="
-            background-image: url('../../../bkn/bknbaru.jpg');
-            background-size: cover;
-            position: relative;
-        "
-    >
+    <div class="main">
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>

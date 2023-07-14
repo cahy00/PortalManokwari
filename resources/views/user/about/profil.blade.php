@@ -48,7 +48,7 @@
 								<div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
 									<div class="team-member">
 										<div class="member-img">
-											<img src="{{asset('bkn/matan3.png')}}" class="img-fluid" alt="" style="min-height: 445px; max-height:445px; min-width:410px;max-width:410px">
+											<img src="assets/img/team/team-1.jpg" class="img-fluid" alt="" style="min-height: 445px; max-height:445px; min-width:410px;max-width:410px">
 										</div>
 										<div class="member-info">
 											<div class="social">
@@ -98,8 +98,8 @@
 												<a href=""><i class="bi bi-instagram"></i></a>
 												<a href=""><i class="bi bi-linkedin"></i></a>
 											</div>
-											<h4>Dr.Dian Violora Nainggolan</h4>
-											<span>Kepala Kantor Regional VI Medan</span>
+											<h4>Dian Violora Nainggolan</h4>
+											<span>Pengelola Data</span>
 										</div>
 									</div>
 								</div>

@@ -75,11 +75,12 @@ class PostController extends Controller
                 'category_id' => $request->category_id,
                 'user_id' 		=> auth()->user()->id,
                 'body' 				=> $request->body,
-                'excerpt' 		=> Str::limit(strip_tags($request->body, '100')),
+                'excerpt' 		=> Str::limit(strip_tags($request->body, '50')),
                 'thumbnail' 	=> 'storage/thumbnail/'. $newName,
                 'status' 			=> $request->status,
                 'is_headline' => $request->is_headline
             ]);
+						
 
         return redirect()->route('post');
 

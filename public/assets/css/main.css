@@ -184,7 +184,7 @@ h6 {
 #hero .carousel-inner .carousel-item-next.carousel-item-start,
 #hero .carousel-inner .carousel-item-prev.carousel-item-end {
     opacity: 1;
-    transition: 10s;
+    transition: 5s;
 }
 
 #hero .carousel-inner .carousel-item-next,
@@ -204,7 +204,7 @@ h6 {
     height: auto;
     background: rgba(255, 255, 255, 0.4);
     border-radius: 50px;
-    transition: 0.1s;
+    transition: 5s;
     color: rgba(255, 255, 255, 0.6);
     width: 54px;
     height: 54px;
@@ -884,7 +884,7 @@ section {
     width: 100%;
     padding: 0;
     background: var(--color-black);
-    background: url("../../bkn/ba.png") center center;
+    background: url("../../bkn/bgwhite.png") center center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
